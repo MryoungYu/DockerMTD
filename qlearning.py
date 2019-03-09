@@ -3,24 +3,32 @@ import random
 
 states = [0,1,2,3,4,5,6,7]
 actions = ['n', 'e', 's', 'w']
-gamma = 0.8
-rewards = []
 
-def td(alpha, gamma, state_sample, action_sample, reward_sample):
-    """时间差分方法评估"""
-    vfunc = dict()
-    for s in states:
-        vfunc[s] = random.random()
-    for iter1 in range(len(state_sample)):
-        for step in range(len(state_sample[iter1])):
-            s = state_sample[iter1][step]
-            r = reward_sample[iter1][step]
-            if len(state_sample[iter1]) - 1 > step:
-                s1 = state_sample[iter1][step + 1]
-                next_v = vfunc[s1]
-            else:
-                next_v = 0.0
-            vfunc[s] = vfunc[s] + alpha * (r + gamma * next_v - vfunc[s])
+N = 10
+
+alpha = 1
+gamma = 0.8
+epsilon = 0.7
+eta = 0.8
+
+exp_time = 13
+max_step = 100
+
+# def td(alpha, gamma, state_sample, action_sample, reward_sample):
+#     """时间差分方法评估"""
+#     vfunc = dict()
+#     for s in states:
+#         vfunc[s] = random.random()
+#     for iter1 in range(len(state_sample)):
+#         for step in range(len(state_sample[iter1])):
+#             s = state_sample[iter1][step]
+#             r = reward_sample[iter1][step]
+#             if len(state_sample[iter1]) - 1 > step:
+#                 s1 = state_sample[iter1][step + 1]
+#                 next_v = vfunc[s1]
+#             else:
+#                 next_v = 0.0
+#             vfunc[s] = vfunc[s] + alpha * (r + gamma * next_v - vfunc[s])
 
 def qlearning(iter, alpha, epsilon):
     """
@@ -107,20 +115,27 @@ def greedy(qfunc, state):
 
 def simulation(s, a):
     """模拟与环境交互"""
-    r = reward(s, a)
     s1 = trans(s, a)
+    r = reward(s, a, s1, 0.8)
+
     t = False
     if s1 == 1:
         t = True
     return t, s1, r
 
-def reward(s, a):
-    return s
+def reward(s, a, s1, eta):
+    r = threat(s1) - threat(s) - k*cost(a)
+    return r
+
+def threat(s):
+    return 0
+
+def cost(a):
+    return 1
 
 def trans(s, a):
     return s % len(states) + 1
 
 if __name__=="__main__":
     print("main")
-    qlearning(0.5 , 0.5)
-    print(rewards)
+    qlearning(0.5, 0.5)
