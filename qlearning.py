@@ -2,7 +2,7 @@ import random
 import pandas as pd
 
 # 状态集合S
-states = ['NORMAL', 'SINGLE_NONE', 'SINGLE_LOW', 'SINGE_HIGH', 'MULTI_NONE', 'MULTI_LOW', 'MULTI_HIGH']
+states = ['NORMAL', 'SINGLE_NONE', 'SINGLE_LOW', 'SINGE_HIGH', 'MULTI_NONE', 'MULTI_LOW', 'MULTI_HIGH', 'FAILED']
 # 行动集合A
 actions = ['NONE', 'TRANS', 'RECOVER', 'RESET', 'RD', 'GA']
 # 每个状态的可用行为At
@@ -14,6 +14,7 @@ valid_actions = {
     'MULTI_NONE':['NONE', 'TRANS', 'RESET', 'RD', 'GA'],
     'MULTI_LOW':['NONE', 'TRANS', 'RECOVER', 'RESET', 'RD', 'GA'],
     'MULTI_HIGH':['NONE', 'TRANS', 'RECOVER', 'RESET', 'RD', 'GA'],
+    'FAILED' :['RESET', 'RD', 'GA']
 }
 # 每个状态对应的威胁值T(S)
 threat_table = {
@@ -24,6 +25,7 @@ threat_table = {
     'MULTI_NONE' : 0.2,
     'MULTI_LOW' : 0.5,
     'MULTI_HIGH' : 0.8,
+    'FAILED' : 1,
 }
 # 每个行为的运行成本C(A)
 cost_table = {
@@ -64,40 +66,43 @@ cost_table = {
 }
 # 状态-行动转移概率矩阵
 trans_matrix = {
-    'SINGLE_NONE+NONE'   :[0.5, 0.3, 0.1, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_NONE+TRANS'  :[0.6, 0.3, 0.0, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_NONE+RESET'  :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_NONE+RD'     :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_NONE+GA'     :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_LOW+NONE'    :[0.1, 0.3, 0.3, 0.2, 0.1, 0.0, 0.0],
-    'SINGLE_LOW+TRANS'   :[0.3, 0.5, 0.2, 0.0 , 0.0, 0.0, 0.0],
-    'SINGLE_LOW+RECOVER' :[0.6, 0.2, 0.1, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_LOW+RESET'    :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_LOW+RD'        :[0.5, 0.3, 0.1, 0.0, 0.1, 0.0, 0.0],
-    'SINGLE_LOW+GA'        :[0.5, 0.4, 0.1, 0.0, 0.0, 0.0, 0.0],
-    'SINGE_HIGH+NONE'      :[0.0, 0.1, 0.1, 0.6, 0.0, 0.1, 0.1],
-    'SINGE_HIGH+TRANS'     :[0.3, 0.3, 0.2, 0.1, 0.1, 0.0, 0.0],
-    'SINGE_HIGH+RECOVER'   :[0.4, 0.3, 0.2, 0.1, 0.0, 0.0, 0.0],
-    'SINGE_HIGH+RESET'     :[0.3, 0.1, 0.2, 0.2, 0.1, 0.1, 0.0],
-    'SINGE_HIGH+RD'         :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0],
-    'SINGE_HIGH+GA'         :[0.6, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0],
-    'MULTI_NONE+NONE'       :[0.5, 0.1, 0.0, 0.0, 0.3, 0.1, 0.0],
-    'MULTI_NONE+TRANS'      :[0.6, 0.1, 0.0, 0.0, 0.3, 0.0, 0.0],
-    'MULTI_NONE+RESET'      :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0],
-    'MULTI_NONE+RD'         :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0],
-    'MULTI_NONE+GA'         :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0],
-    'MULTI_LOW+NONE'        :[0.1, 0.1, 0.0, 0.0, 0.3, 0.3, 0.2],
-    'MULTI_LOW+TRANS'       :[0.3, 0.0, 0.0, 0.0 , 0.5, 0.2, 0.0],
-    'MULTI_LOW+RECOVER'     :[0.6, 0.1, 0.0, 0.0, 0.2, 0.1, 0.0],
-    'MULTI_LOW+RESET'       :[0.5, 0.1, 0.0, 0.0, 0.2, 0.2, 0.0],
-    'MULTI_LOW+RD'          :[0.5, 0.1, 0.0, 0.0, 0.3, 0.1, 0.0],
-    'MULTI_LOW+GA'          :[0.5, 0.0, 0.0, 0.0, 0.4, 0.1, 0.0],
-    'MULTI_HIGH+NONE'      :[0.0, 0.0, 0.1, 0.1, 0.1, 0.1, 0.6],
-    'MULTI_HIGH+TRANS'     :[0.3, 0.0, 0.0, 0.0, 0.1, 0.4, 0.2],
-    'MULTI_HIGH+RECOVER'   :[0.4, 0.0, 0.0, 0.0, 0.3, 0.2, 0.1],
-    'MULTI_HIGH+RESET'     :[0.3, 0.0, 0.0, 0.0, 0.2, 0.3, 0.2],
-    'MULTI_HIGH+RD'         :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0],
-    'MULTI_HIGH+GA'         :[0.6, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0],
+    'NORMAL+NONE'        :[0.5, 0.3, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0],
+    'NORMAL+TRANS'       :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'NORMAL+GA'          :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_NONE+NONE'   :[0.0, 0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0],
+    'SINGLE_NONE+TRANS'  :[0.6, 0.3, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_NONE+RESET'  :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_NONE+RD'     :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_NONE+GA'     :[0.7, 0.2, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_LOW+NONE'    :[0.0, 0.0, 0.5, 0.3, 0.0, 0.2, 0.0, 0.0],
+    'SINGLE_LOW+TRANS'   :[0.3, 0.5, 0.2, 0.0 , 0.0, 0.0, 0.0, 0.0],
+    'SINGLE_LOW+RECOVER' :[0.6, 0.2, 0.1, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_LOW+RESET'    :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_LOW+RD'        :[0.5, 0.3, 0.1, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGLE_LOW+GA'        :[0.5, 0.4, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0],
+    'SINGE_HIGH+NONE'      :[0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.5, 0.0],
+    'SINGE_HIGH+TRANS'     :[0.3, 0.2, 0.2, 0.1, 0.1, 0.0, 0.0, 0.1],
+    'SINGE_HIGH+RECOVER'   :[0.4, 0.2, 0.2, 0.1, 0.0, 0.0, 0.0, 0.1],
+    'SINGE_HIGH+RESET'     :[0.3, 0.2, 0.2, 0.1, 0.1, 0.1, 0.0, 0.0],
+    'SINGE_HIGH+RD'         :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'SINGE_HIGH+GA'         :[0.6, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0],
+    'MULTI_NONE+NONE'       :[0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0, 0.0],
+    'MULTI_NONE+TRANS'      :[0.6, 0.1, 0.0, 0.0, 0.3, 0.0, 0.0, 0.0],
+    'MULTI_NONE+RESET'      :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0],
+    'MULTI_NONE+RD'         :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0],
+    'MULTI_NONE+GA'         :[0.7, 0.1, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0],
+    'MULTI_LOW+NONE'        :[0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.0],
+    'MULTI_LOW+TRANS'       :[0.3, 0.0, 0.0, 0.0 , 0.5, 0.2, 0.0, 0.0],
+    'MULTI_LOW+RECOVER'     :[0.6, 0.1, 0.0, 0.0, 0.2, 0.1, 0.0, 0.0],
+    'MULTI_LOW+RESET'       :[0.5, 0.1, 0.0, 0.0, 0.2, 0.2, 0.0, 0.0],
+    'MULTI_LOW+RD'          :[0.5, 0.1, 0.0, 0.0, 0.3, 0.1, 0.0, 0.0],
+    'MULTI_LOW+GA'          :[0.5, 0.0, 0.0, 0.0, 0.4, 0.1, 0.0, 0.0],
+    'MULTI_HIGH+NONE'      :[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5],
+    'MULTI_HIGH+TRANS'     :[0.3, 0.0, 0.0, 0.0, 0.1, 0.3, 0.2, 0.1],
+    'MULTI_HIGH+RECOVER'   :[0.4, 0.0, 0.0, 0.0, 0.2, 0.2, 0.1, 0.1],
+    'MULTI_HIGH+RESET'     :[0.3, 0.0, 0.0, 0.0, 0.2, 0.2, 0.2, 0.1],
+    'MULTI_HIGH+RD'         :[0.5, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0, 0.0],
+    'MULTI_HIGH+GA'         :[0.6, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0],
 }
 # 初始化Q值表
 q_table = pd.DataFrame(data=[[0 for _ in actions] for _ in states],
@@ -107,13 +112,13 @@ N = 10
 # 承受系数，环境参数
 eta = 0.8
 # 学习率
-alpha = 1
+alpha = 0.8
 # 折扣因子
 gamma = 0.8
 # 贪婪度
 epsilon = 0.7
 # 采样数
-exp_time = 13
+exp_time = 1000
 # 最大步长
 max_step = 100
 # 累积收益
@@ -147,12 +152,12 @@ def qlearning(iter):
     rewards_list = []
     # 终止状态标识
     flag = False
-    # 选择起始s
-    init_index = random.randint(0, len(states)-1)
+    # 选择起始s，不可能以FAILED开始
+    init_index = random.randint(0, len(states)-2)
     current_state = states[init_index]
     total_step = 0
     states_list.append(current_state)
-    while 'NORMAL' != current_state and total_step < max_step:
+    while 'FAILED' != current_state and total_step < max_step:
         # 根据epsilon-greedy选择a
         current_action = epsilon_greedy(current_state)
         # 获取回报r和下一个状态s1
@@ -169,7 +174,8 @@ def qlearning(iter):
     print("Stats:", states_list)
     print("Actions:", actions_list)
     print("Rewards:", rewards_list)
-    print("Q-TABLE:", q_table)
+    print("Q-TABLE:")
+    print(q_table)
     return 0
 
 
