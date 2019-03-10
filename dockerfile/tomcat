@@ -1,0 +1,24 @@
+#@node=n1@type=SYS
+FROM sshd:ubtuntu
+#@end
+#@node=n4@type=CONF@dependence=n1:0
+MAINTAINER youngyu
+ENV REFRESHED_AT 2019-03-10
+#@end
+#@node=n2@type=APP@dependence=n1:1@group=tomcat
+WORKDIR /usr
+RUN mkdir jdk
+RUN mkdir tomcat
+ADD jdk1.8.0_131 /usr/jdk/
+ADD apache-tomcat-7.0.81 /usr/tomcat/
+ENV JAVA_HOME=/usr/jdk
+ENV JRE_HOME=$JAVA_HOME/jre
+ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
+ENV PATH=/sbin:$JAVA_HOME/bin:$PATH
+#@end
+#@node=n3@type=INTER@dependence=n2:2@group=tomcat
+EXPOSE 8080
+#@end
+#@node=n5@type=CONF@dependence=n3:0
+ENTRYPOINT ["/usr/tomcat/bin/catalina.sh","run"]
+#@end
