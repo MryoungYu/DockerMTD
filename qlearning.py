@@ -270,4 +270,5 @@ if __name__=="__main__":
     for i in range(exp_time):
         print("Episode %d:" % (i))
         qlearning(i)
-    print("Q-Table:", q_table)
+    print("Q-Table:")
+    print(q_table)
