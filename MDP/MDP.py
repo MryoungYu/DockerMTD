@@ -212,7 +212,8 @@ class MDP:
     def simulation(self, state, action):
         """与模拟环境交互"""
         next_state = self.trans(state, action, 0)
-        r = self.reward(state, action, next_state)
+        r = self.reward_new_func(state, action, next_state)
+        # r = self.reward(state, action, next_state)
         return next_state, r
 
     def trans(self, current_state, current_action, flag):
@@ -276,7 +277,8 @@ class MDP:
     def environment(self, state, action):
         """真实环境模拟"""
         next_state = self.trans(state, action, 1)
-        r = self.reward(state, action, next_state)
+        r = self.reward_new_func(state, action, next_state)
+        # r = self.reward(state, action, next_state)
         return next_state, r
 
     def update_info(self, current_state, next_state, reward):
@@ -297,3 +299,18 @@ class MDP:
             if each_last_state == '0' and each_current_state == '1':
                 at_list.append(i)
         return at_list
+
+    def update_reward_only(self, reward):
+        self.aggregate_utility *= self.gamma
+        self.aggregate_utility += reward
+
+    def reward_new_func(self, current_state, action, next_state):
+        threat_e_next = 0;
+        total_trans_prob = 0
+        trans_table = self.states_actions_trans_prob[0][current_state]
+        for i in range(len(trans_table)):
+            threat_e_next += self.TA(i) * trans_table[i]
+            total_trans_prob += trans_table[i]
+        threat_e_next /= total_trans_prob
+        threat_t_next = self.TA(next_state)
+        return threat_e_next - threat_t_next

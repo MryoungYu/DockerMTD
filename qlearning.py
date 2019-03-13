@@ -118,9 +118,9 @@ gamma = 0.8
 # 贪婪度
 epsilon = 0.7
 # 采样数
-exp_time = 1000
+exp_time = 10000
 # 最大步长
-max_step = 100
+max_step = 1000
 # 累积收益
 aggregate_utility = 0.8
 
@@ -171,9 +171,9 @@ def qlearning(iter):
         states_list.append(current_state)
         actions_list.append(current_action)
         rewards_list.append(utility)
-    print("Stats:", states_list)
-    print("Actions:", actions_list)
-    print("Rewards:", rewards_list)
+    # print("Stats:", states_list)
+    # print("Actions:", actions_list)
+    # print("Rewards:", rewards_list)
     print("Q-TABLE:")
     print(q_table)
     return 0
