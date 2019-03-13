@@ -22,9 +22,21 @@ class BAG:
     asset_value = [2, 4, 4, 4, 3, 3, 3, 5]
     # 威胁值
     node_threat = []
+    # 攻击者的经验加成比例
+    attacker_experience = 1.2
 
     def __init__(self):
         # TODO 可以从文件中读取信息计算trans_prob和loss_value
+        # for test
+        # self.node_num = 3
+        # self.trans_prob = [
+        #     [0.1, 0.5, 0.4, 0.],
+        #     [0., 0.8, 0., 0.2],
+        #     [0., 0., 0.3, 0.7],
+        #     [0., 0., 0., 1.],
+        # ]
+        # self.loss_value = [0, 1, 2, 3]
+        # test end
         self.access_prob = self.cal_access_pro()
         self.node_threat = self.cal_node_threat()
 
@@ -47,3 +59,8 @@ class BAG:
             total_threat += self.node_threat[i] * self.asset_value[i]
             total_asset_value += self.asset_value[i]
         return total_threat / total_asset_value
+
+    def update_trans_prob(self, attack_path):
+        for i in attack_path:
+            for j in range(self.node_num + 1):
+                self.trans_prob[i][j] *= self.attacker_experience
