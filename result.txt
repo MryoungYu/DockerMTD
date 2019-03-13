@@ -1,0 +1,2099 @@
+Round 0
+Traning...
+Trainging Over : 78.86008381843567
+Make Decision: state = 0action = TRANS
+Interact with System: next state is 240, reward in this round is -45.500000
+Updating Assessment System...
+Updating Done : 3.9963138103485107
+Aggregate Utility is -45.5
+--------------------------------------------------------------
+Round 1
+Traning...
+Trainging Over : 89.99105381965637
+Make Decision: state = 240action = GA
+Interact with System: next state is 128, reward in this round is 31.860000
+Updating Assessment System...
+Updating Done : 4.648334980010986
+Aggregate Utility is -4.540000000000003
+--------------------------------------------------------------
+Round 2
+Traning...
+Trainging Over : 89.90486216545105
+Make Decision: state = 128action = RD
+Interact with System: next state is 129, reward in this round is -8.460000
+Updating Assessment System...
+Updating Done : 4.543848037719727
+Aggregate Utility is -12.092000000000002
+--------------------------------------------------------------
+Round 3
+Traning...
+Trainging Over : 80.79548263549805
+Make Decision: state = 129action = RD
+Interact with System: next state is 185, reward in this round is -26.320000
+Updating Assessment System...
+Updating Done : 3.9035589694976807
+Aggregate Utility is -35.9936
+--------------------------------------------------------------
+Round 4
+Traning...
+Trainging Over : 74.8628180027008
+Make Decision: state = 185action = RD
+Interact with System: next state is 82, reward in this round is 19.700000
+Updating Assessment System...
+Updating Done : 3.9454402923583984
+Aggregate Utility is -9.094880000000003
+--------------------------------------------------------------
+Round 5
+Traning...
+Trainging Over : 73.53035759925842
+Make Decision: state = 82action = RESET
+Interact with System: next state is 125, reward in this round is -23.440000
+Updating Assessment System...
+Updating Done : 3.9055261611938477
+Aggregate Utility is -30.715904000000005
+--------------------------------------------------------------
+Round 6
+Traning...
+Trainging Over : 70.80563807487488
+Make Decision: state = 125action = RD
+Interact with System: next state is 52, reward in this round is 22.240000
+Updating Assessment System...
+Updating Done : 3.8467416763305664
+Aggregate Utility is -2.3327232000000038
+--------------------------------------------------------------
+Round 7
+Traning...
+Trainging Over : 73.76770663261414
+Make Decision: state = 52action = RD
+Interact with System: next state is 23, reward in this round is -1.480000
+Updating Assessment System...
+Updating Done : 4.05114483833313
+Aggregate Utility is -3.346178560000003
+--------------------------------------------------------------
+Round 8
+Traning...
+Trainging Over : 79.39341354370117
+Make Decision: state = 23action = RD
+Interact with System: next state is 210, reward in this round is -11.840000
+Updating Assessment System...
+Updating Done : 4.256160020828247
+Aggregate Utility is -14.516942848000006
+--------------------------------------------------------------
+Round 9
+Traning...
+Trainging Over : 80.2634768486023
+Make Decision: state = 210action = GA
+Interact with System: next state is 132, reward in this round is 20.760000
+Updating Assessment System...
+Updating Done : 4.337804794311523
+Aggregate Utility is 9.146445721599996
+--------------------------------------------------------------
+Round 10
+Traning...
+Trainging Over : 82.9156186580658
+Make Decision: state = 132action = RD
+Interact with System: next state is 173, reward in this round is -23.520000
+Updating Assessment System...
+Updating Done : 4.397664308547974
+Aggregate Utility is -16.202843422720008
+--------------------------------------------------------------
+Round 11
+Traning...
+Trainging Over : 83.27459692955017
+Make Decision: state = 173action = RD
+Interact with System: next state is 239, reward in this round is -15.700000
+Updating Assessment System...
+Updating Done : 4.241805553436279
+Aggregate Utility is -28.662274738176013
+--------------------------------------------------------------
+Round 12
+Traning...
+Trainging Over : 78.72737622261047
+Make Decision: state = 239action = RD
+Interact with System: next state is 121, reward in this round is 7.580000
+Updating Assessment System...
+Updating Done : 4.368794679641724
+Aggregate Utility is -15.34981979054081
+--------------------------------------------------------------
+Round 13
+Traning...
+Trainging Over : 80.82895684242249
+Make Decision: state = 121action = RD
+Interact with System: next state is 177, reward in this round is 1.900000
+Updating Assessment System...
+Updating Done : 4.36602783203125
+Aggregate Utility is -10.379855832432646
+--------------------------------------------------------------
+Round 14
+Traning...
+Trainging Over : 78.76399731636047
+Make Decision: state = 177action = RESET
+Interact with System: next state is 39, reward in this round is 15.380000
+Updating Assessment System...
+Updating Done : 4.28310751914978
+Aggregate Utility is 7.076115334053885
+--------------------------------------------------------------
+Round 15
+Traning...
+Trainging Over : 80.42356038093567
+Make Decision: state = 39action = RD
+Interact with System: next state is 220, reward in this round is -15.640000
+Updating Assessment System...
+Updating Done : 4.340811491012573
+Aggregate Utility is -9.979107732756892
+--------------------------------------------------------------
+Round 16
+Traning...
+Trainging Over : 83.32262539863586
+Make Decision: state = 220action = RD
+Interact with System: next state is 120, reward in this round is 4.100000
+Updating Assessment System...
+Updating Done : 4.214972972869873
+Aggregate Utility is -3.883286186205516
+--------------------------------------------------------------
+Round 17
+Traning...
+Trainging Over : 78.86375570297241
+Make Decision: state = 120action = GA
+Interact with System: next state is 146, reward in this round is 8.560000
+Updating Assessment System...
+Updating Done : 4.156466007232666
+Aggregate Utility is 5.453371051035591
+--------------------------------------------------------------
+Round 18
+Traning...
+Trainging Over : 80.92876553535461
+Make Decision: state = 146action = RD
+Interact with System: next state is 154, reward in this round is -4.280000
+Updating Assessment System...
+Updating Done : 4.137167453765869
+Aggregate Utility is 0.08269684082847117
+--------------------------------------------------------------
+Round 19
+Traning...
+Trainging Over : 78.23980832099915
+Make Decision: state = 154action = RESET
+Interact with System: next state is 98, reward in this round is 4.580000
+Updating Assessment System...
+Updating Done : 4.120251417160034
+Aggregate Utility is 4.646157472662775
+--------------------------------------------------------------
+Round 20
+Traning...
+Trainging Over : 77.65001916885376
+Make Decision: state = 98action = RD
+Interact with System: next state is 241, reward in this round is -28.280000
+Updating Assessment System...
+Updating Done : 4.1841113567352295
+Aggregate Utility is -24.563074021869777
+--------------------------------------------------------------
+Round 21
+Traning...
+Trainging Over : 75.81435823440552
+Make Decision: state = 241action = RD
+Interact with System: next state is 45, reward in this round is 26.000000
+Updating Assessment System...
+Updating Done : 4.682774066925049
+Aggregate Utility is 6.3495407825041745
+--------------------------------------------------------------
+Round 22
+Traning...
+Trainging Over : 88.22125959396362
+Make Decision: state = 45action = RD
+Interact with System: next state is 76, reward in this round is 7.660000
+Updating Assessment System...
+Updating Done : 4.8790154457092285
+Aggregate Utility is 12.73963262600334
+--------------------------------------------------------------
+Round 23
+Traning...
+Trainging Over : 86.71784400939941
+Make Decision: state = 76action = RD
+Interact with System: next state is 151, reward in this round is -20.980000
+Updating Assessment System...
+Updating Done : 4.619025707244873
+Aggregate Utility is -10.788293899197331
+--------------------------------------------------------------
+Round 24
+Traning...
+Trainging Over : 83.94430708885193
+Make Decision: state = 151action = RD
+Interact with System: next state is 148, reward in this round is 11.300000
+Updating Assessment System...
+Updating Done : 4.036446809768677
+Aggregate Utility is 2.6693648806421386
+--------------------------------------------------------------
+Round 25
+Traning...
+Trainging Over : 83.5949444770813
+Make Decision: state = 148action = GA
+Interact with System: next state is 16, reward in this round is 14.720000
+Updating Assessment System...
+Updating Done : 4.468081712722778
+Aggregate Utility is 16.85549190451371
+--------------------------------------------------------------
+Round 26
+Traning...
+Trainging Over : 84.29176092147827
+Make Decision: state = 16action = GA
+Interact with System: next state is 207, reward in this round is -32.860000
+Updating Assessment System...
+Updating Done : 4.4176342487335205
+Aggregate Utility is -19.37560647638903
+--------------------------------------------------------------
+Round 27
+Traning...
+Trainging Over : 83.46961164474487
+Make Decision: state = 207action = RD
+Interact with System: next state is 86, reward in this round is 12.240000
+Updating Assessment System...
+Updating Done : 4.3379504680633545
+Aggregate Utility is -3.260485181111223
+--------------------------------------------------------------
+Round 28
+Traning...
+Trainging Over : 80.60474896430969
+Make Decision: state = 86action = GA
+Interact with System: next state is 15, reward in this round is 8.660000
+Updating Assessment System...
+Updating Done : 4.074151277542114
+Aggregate Utility is 6.051611855111016
+--------------------------------------------------------------
+Round 29
+Traning...
+Trainging Over : 82.04723334312439
+Make Decision: state = 15action = RD
+Interact with System: next state is 66, reward in this round is 4.160000
+Updating Assessment System...
+Updating Done : 4.039116859436035
+Aggregate Utility is 9.001289484088817
+--------------------------------------------------------------
+Round 30
+Traning...
+Trainging Over : 73.28051733970642
+Make Decision: state = 66action = GA
+Interact with System: next state is 15, reward in this round is -5.920000
+Updating Assessment System...
+Updating Done : 4.225325107574463
+Aggregate Utility is 1.2810315872710492
+--------------------------------------------------------------
+Round 31
+Traning...
+Trainging Over : 75.38401222229004
+Make Decision: state = 15action = RD
+Interact with System: next state is 45, reward in this round is -7.940000
+Updating Assessment System...
+Updating Done : 3.785020589828491
+Aggregate Utility is -6.915174730183159
+--------------------------------------------------------------
+Round 32
+Traning...
+Trainging Over : 75.57461881637573
+Make Decision: state = 45action = GA
+Interact with System: next state is 57, reward in this round is -8.740000
+Updating Assessment System...
+Updating Done : 3.8499627113342285
+Aggregate Utility is -14.272139784146532
+--------------------------------------------------------------
+Round 33
+Traning...
+Trainging Over : 74.36570000648499
+Make Decision: state = 57action = RESET
+Interact with System: next state is 54, reward in this round is 4.180000
+Updating Assessment System...
+Updating Done : 3.872131824493408
+Aggregate Utility is -7.23771182731722
+--------------------------------------------------------------
+Round 34
+Traning...
+Trainging Over : 73.85342717170715
+Make Decision: state = 54action = GA
+Interact with System: next state is 249, reward in this round is -29.240000
+Updating Assessment System...
+Updating Done : 4.0709919929504395
+Aggregate Utility is -35.03016946185379
+--------------------------------------------------------------
+Round 35
+Traning...
+Trainging Over : 78.88603639602661
+Make Decision: state = 249action = RD
+Interact with System: next state is 75, reward in this round is 29.640000
+Updating Assessment System...
+Updating Done : 4.039942741394043
+Aggregate Utility is 1.6158644305169751
+--------------------------------------------------------------
+Round 36
+Traning...
+Trainging Over : 74.64411878585815
+Make Decision: state = 75action = RD
+Interact with System: next state is 52, reward in this round is 0.360000
+Updating Assessment System...
+Updating Done : 4.156367063522339
+Aggregate Utility is 1.6526915444135801
+--------------------------------------------------------------
+Round 37
+Traning...
+Trainging Over : 75.46759915351868
+Make Decision: state = 52action = GA
+Interact with System: next state is 83, reward in this round is -9.580000
+Updating Assessment System...
+Updating Done : 3.9804272651672363
+Aggregate Utility is -8.257846764469141
+--------------------------------------------------------------
+Round 38
+Traning...
+Trainging Over : 75.5334644317627
+Make Decision: state = 83action = RD
+Interact with System: next state is 23, reward in this round is 6.660000
+Updating Assessment System...
+Updating Done : 4.034623146057129
+Aggregate Utility is 0.0537225884246908
+--------------------------------------------------------------
+Round 39
+Traning...
+Trainging Over : 73.97161030769348
+Make Decision: state = 23action = GA
+Interact with System: next state is 6, reward in this round is 17.960000
+Updating Assessment System...
+Updating Done : 4.013641357421875
+Aggregate Utility is 18.00297807073975
+--------------------------------------------------------------
+Round 40
+Traning...
+Trainging Over : 74.16579604148865
+Make Decision: state = 6action = GA
+Interact with System: next state is 38, reward in this round is -12.220000
+Updating Assessment System...
+Updating Done : 4.03577446937561
+Aggregate Utility is 2.182382456591803
+--------------------------------------------------------------
+Round 41
+Traning...
+Trainging Over : 74.92135190963745
+Make Decision: state = 38action = RECOVER
+Interact with System: next state is 204, reward in this round is -12.488000
+Updating Assessment System...
+Updating Done : 4.051592588424683
+Aggregate Utility is -10.742094034726557
+--------------------------------------------------------------
+Round 42
+Traning...
+Trainging Over : 75.53260278701782
+Make Decision: state = 204action = GA
+Interact with System: next state is 136, reward in this round is 13.460000
+Updating Assessment System...
+Updating Done : 3.9599270820617676
+Aggregate Utility is 4.8663247722187535
+--------------------------------------------------------------
+Round 43
+Traning...
+Trainging Over : 73.16636157035828
+Make Decision: state = 136action = RD
+Interact with System: next state is 168, reward in this round is -11.420000
+Updating Assessment System...
+Updating Done : 3.999302625656128
+Aggregate Utility is -7.526940182224996
+--------------------------------------------------------------
+Round 44
+Traning...
+Trainging Over : 73.24770283699036
+Make Decision: state = 168action = RD
+Interact with System: next state is 251, reward in this round is -34.780000
+Updating Assessment System...
+Updating Done : 4.103069305419922
+Aggregate Utility is -40.80155214578001
+--------------------------------------------------------------
+Round 45
+Traning...
+Trainging Over : 76.05730867385864
+Make Decision: state = 251action = RD
+Interact with System: next state is 104, reward in this round is 34.280000
+Updating Assessment System...
+Updating Done : 3.9820241928100586
+Aggregate Utility is 1.6387582833759993
+--------------------------------------------------------------
+Round 46
+Traning...
+Trainging Over : 74.98946332931519
+Make Decision: state = 104action = RD
+Interact with System: next state is 120, reward in this round is -11.580000
+Updating Assessment System...
+Updating Done : 4.1833271980285645
+Aggregate Utility is -10.268993373299203
+--------------------------------------------------------------
+Round 47
+Traning...
+Trainging Over : 72.22217464447021
+Make Decision: state = 120action = RD
+Interact with System: next state is 20, reward in this round is 21.560000
+Updating Assessment System...
+Updating Done : 4.127666234970093
+Aggregate Utility is 13.344805301360639
+--------------------------------------------------------------
+Round 48
+Traning...
+Trainging Over : 73.72072672843933
+Make Decision: state = 20action = RD
+Interact with System: next state is 34, reward in this round is -0.320000
+Updating Assessment System...
+Updating Done : 4.106527328491211
+Aggregate Utility is 10.355844241088512
+--------------------------------------------------------------
+Round 49
+Traning...
+Trainging Over : 71.52078199386597
+Make Decision: state = 34action = GA
+Interact with System: next state is 99, reward in this round is -20.520000
+Updating Assessment System...
+Updating Done : 4.0989227294921875
+Aggregate Utility is -12.235324607129197
+--------------------------------------------------------------
+Round 50
+Traning...
+Trainging Over : 73.92350673675537
+Make Decision: state = 99action = RD
+Interact with System: next state is 225, reward in this round is -9.040000
+Updating Assessment System...
+Updating Done : 4.09998345375061
+Aggregate Utility is -18.828259685703358
+--------------------------------------------------------------
+Round 51
+Traning...
+Trainging Over : 76.14156103134155
+Make Decision: state = 225action = RD
+Interact with System: next state is 206, reward in this round is 7.360000
+Updating Assessment System...
+Updating Done : 4.081454753875732
+Aggregate Utility is -7.702607748562688
+--------------------------------------------------------------
+Round 52
+Traning...
+Trainging Over : 73.57252788543701
+Make Decision: state = 206action = GA
+Interact with System: next state is 125, reward in this round is -16.100000
+Updating Assessment System...
+Updating Done : 4.084928035736084
+Aggregate Utility is -22.262086198850152
+--------------------------------------------------------------
+Round 53
+Traning...
+Trainging Over : 74.9984884262085
+Make Decision: state = 125action = GA
+Interact with System: next state is 17, reward in this round is 28.040000
+Updating Assessment System...
+Updating Done : 4.054949045181274
+Aggregate Utility is 10.230331040919879
+--------------------------------------------------------------
+Round 54
+Traning...
+Trainging Over : 72.18619775772095
+Make Decision: state = 17action = RD
+Interact with System: next state is 50, reward in this round is -6.920000
+Updating Assessment System...
+Updating Done : 4.02908992767334
+Aggregate Utility is 1.2642648327359023
+--------------------------------------------------------------
+Round 55
+Traning...
+Trainging Over : 71.86680507659912
+Make Decision: state = 50action = GA
+Interact with System: next state is 154, reward in this round is -6.180000
+Updating Assessment System...
+Updating Done : 3.9928641319274902
+Aggregate Utility is -5.1685881338112765
+--------------------------------------------------------------
+Round 56
+Traning...
+Trainging Over : 73.90984749794006
+Make Decision: state = 154action = RD
+Interact with System: next state is 18, reward in this round is 15.360000
+Updating Assessment System...
+Updating Done : 3.9861645698547363
+Aggregate Utility is 11.225129492950977
+--------------------------------------------------------------
+Round 57
+Traning...
+Trainging Over : 71.80051708221436
+Make Decision: state = 18action = RD
+Interact with System: next state is 196, reward in this round is -12.520000
+Updating Assessment System...
+Updating Done : 3.961693286895752
+Aggregate Utility is -3.539896405639217
+--------------------------------------------------------------
+Round 58
+Traning...
+Trainging Over : 72.79950165748596
+Make Decision: state = 196action = GA
+Interact with System: next state is 235, reward in this round is -24.480000
+Updating Assessment System...
+Updating Done : 4.146332740783691
+Aggregate Utility is -27.311917124511375
+--------------------------------------------------------------
+Round 59
+Traning...
+Trainging Over : 72.26296329498291
+Make Decision: state = 235action = GA
+Interact with System: next state is 147, reward in this round is 13.140000
+Updating Assessment System...
+Updating Done : 4.052335500717163
+Aggregate Utility is -8.709533699609109
+--------------------------------------------------------------
+Round 60
+Traning...
+Trainging Over : 76.30004072189331
+Make Decision: state = 147action = RD
+Interact with System: next state is 58, reward in this round is 4.960000
+Updating Assessment System...
+Updating Done : 3.993145227432251
+Aggregate Utility is -2.007626959687279
+--------------------------------------------------------------
+Round 61
+Traning...
+Trainging Over : 73.50211238861084
+Make Decision: state = 58action = RECOVER
+Interact with System: next state is 146, reward in this round is 2.316000
+Updating Assessment System...
+Updating Done : 4.009644508361816
+Aggregate Utility is 0.709898432250176
+--------------------------------------------------------------
+Round 62
+Traning...
+Trainging Over : 70.81825423240662
+Make Decision: state = 146action = GA
+Interact with System: next state is 24, reward in this round is 10.920000
+Updating Assessment System...
+Updating Done : 3.9849743843078613
+Aggregate Utility is 11.487918745800139
+--------------------------------------------------------------
+Round 63
+Traning...
+Trainging Over : 71.52955770492554
+Make Decision: state = 24action = GA
+Interact with System: next state is 4, reward in this round is 9.980000
+Updating Assessment System...
+Updating Done : 3.965475082397461
+Aggregate Utility is 19.170334996640108
+--------------------------------------------------------------
+Round 64
+Traning...
+Trainging Over : 74.49511480331421
+Make Decision: state = 4action = RESET
+Interact with System: next state is 196, reward in this round is -23.380000
+Updating Assessment System...
+Updating Done : 4.085434913635254
+Aggregate Utility is -8.043732002687909
+--------------------------------------------------------------
+Round 65
+Traning...
+Trainging Over : 74.37500095367432
+Make Decision: state = 196action = RD
+Interact with System: next state is 196, reward in this round is -0.480000
+Updating Assessment System...
+Updating Done : 4.017679214477539
+Aggregate Utility is -6.9149856021503275
+--------------------------------------------------------------
+Round 66
+Traning...
+Trainging Over : 73.7540590763092
+Make Decision: state = 196action = RD
+Interact with System: next state is 222, reward in this round is -19.180000
+Updating Assessment System...
+Updating Done : 4.0131285190582275
+Aggregate Utility is -24.71198848172026
+--------------------------------------------------------------
+Round 67
+Traning...
+Trainging Over : 76.33220148086548
+Make Decision: state = 222action = GA
+Interact with System: next state is 109, reward in this round is 5.940000
+Updating Assessment System...
+Updating Done : 3.9244184494018555
+Aggregate Utility is -13.829590785376213
+--------------------------------------------------------------
+Round 68
+Traning...
+Trainging Over : 70.45369791984558
+Make Decision: state = 109action = RD
+Interact with System: next state is 60, reward in this round is 7.500000
+Updating Assessment System...
+Updating Done : 4.025834321975708
+Aggregate Utility is -3.5636726283009663
+--------------------------------------------------------------
+Round 69
+Traning...
+Trainging Over : 71.49297070503235
+Make Decision: state = 60action = GA
+Interact with System: next state is 173, reward in this round is -10.840000
+Updating Assessment System...
+Updating Done : 4.009793519973755
+Aggregate Utility is -13.690938102640779
+--------------------------------------------------------------
+Round 70
+Traning...
+Trainging Over : 72.97824597358704
+Make Decision: state = 173action = RD
+Interact with System: next state is 108, reward in this round is 8.600000
+Updating Assessment System...
+Updating Done : 4.1077046394348145
+Aggregate Utility is -2.3527504821126186
+--------------------------------------------------------------
+Round 71
+Traning...
+Trainging Over : 73.57678699493408
+Make Decision: state = 108action = GA
+Interact with System: next state is 183, reward in this round is -21.940000
+Updating Assessment System...
+Updating Done : 4.02092432975769
+Aggregate Utility is -23.822200385690095
+--------------------------------------------------------------
+Round 72
+Traning...
+Trainging Over : 71.38797283172607
+Make Decision: state = 183action = RD
+Interact with System: next state is 122, reward in this round is 8.440000
+Updating Assessment System...
+Updating Done : 4.013045072555542
+Aggregate Utility is -10.617760308552079
+--------------------------------------------------------------
+Round 73
+Traning...
+Trainging Over : 72.46005296707153
+Make Decision: state = 122action = GA
+Interact with System: next state is 231, reward in this round is -11.000000
+Updating Assessment System...
+Updating Done : 4.056551456451416
+Aggregate Utility is -19.494208246841662
+--------------------------------------------------------------
+Round 74
+Traning...
+Trainging Over : 73.60904717445374
+Make Decision: state = 231action = RD
+Interact with System: next state is 102, reward in this round is 19.540000
+Updating Assessment System...
+Updating Done : 4.010844945907593
+Aggregate Utility is 3.9446334025266694
+--------------------------------------------------------------
+Round 75
+Traning...
+Trainging Over : 74.84954166412354
+Make Decision: state = 102action = GA
+Interact with System: next state is 42, reward in this round is 9.660000
+Updating Assessment System...
+Updating Done : 4.074624300003052
+Aggregate Utility is 12.815706722021334
+--------------------------------------------------------------
+Round 76
+Traning...
+Trainging Over : 73.31178045272827
+Make Decision: state = 42action = GA
+Interact with System: next state is 110, reward in this round is -16.180000
+Updating Assessment System...
+Updating Done : 4.046847581863403
+Aggregate Utility is -5.927434622382936
+--------------------------------------------------------------
+Round 77
+Traning...
+Trainging Over : 74.17632865905762
+Make Decision: state = 110action = RESET
+Interact with System: next state is 44, reward in this round is 14.500000
+Updating Assessment System...
+Updating Done : 3.9694700241088867
+Aggregate Utility is 9.758052302093652
+--------------------------------------------------------------
+Round 78
+Traning...
+Trainging Over : 73.48169445991516
+Make Decision: state = 44action = RD
+Interact with System: next state is 168, reward in this round is -8.880000
+Updating Assessment System...
+Updating Done : 4.078239679336548
+Aggregate Utility is -1.0735581583250768
+--------------------------------------------------------------
+Round 79
+Traning...
+Trainging Over : 73.9106068611145
+Make Decision: state = 168action = GA
+Interact with System: next state is 146, reward in this round is -1.280000
+Updating Assessment System...
+Updating Done : 3.969160318374634
+Aggregate Utility is -2.138846526660062
+--------------------------------------------------------------
+Round 80
+Traning...
+Trainging Over : 73.37945914268494
+Make Decision: state = 146action = RD
+Interact with System: next state is 109, reward in this round is -11.480000
+Updating Assessment System...
+Updating Done : 4.040415525436401
+Aggregate Utility is -13.191077221328054
+--------------------------------------------------------------
+Round 81
+Traning...
+Trainging Over : 74.30929350852966
+Make Decision: state = 109action = GA
+Interact with System: next state is 60, reward in this round is 6.700000
+Updating Assessment System...
+Updating Done : 3.952591896057129
+Aggregate Utility is -3.85286177706244
+--------------------------------------------------------------
+Round 82
+Traning...
+Trainging Over : 72.02076983451843
+Make Decision: state = 60action = RECOVER
+Interact with System: next state is 201, reward in this round is -5.984000
+Updating Assessment System...
+Updating Done : 3.971005916595459
+Aggregate Utility is -9.06628942164996
+--------------------------------------------------------------
+Round 83
+Traning...
+Trainging Over : 70.46777582168579
+Make Decision: state = 201action = RESET
+Interact with System: next state is 245, reward in this round is -22.520000
+Updating Assessment System...
+Updating Done : 4.08460545539856
+Aggregate Utility is -29.773031537319973
+--------------------------------------------------------------
+Round 84
+Traning...
+Trainging Over : 71.99156212806702
+Make Decision: state = 245action = RD
+Interact with System: next state is 150, reward in this round is 25.740000
+Updating Assessment System...
+Updating Done : 4.120036840438843
+Aggregate Utility is 1.92157477014403
+--------------------------------------------------------------
+Round 85
+Traning...
+Trainging Over : 77.52562069892883
+Make Decision: state = 150action = GA
+Interact with System: next state is 241, reward in this round is -24.340000
+Updating Assessment System...
+Updating Done : 4.156188488006592
+Aggregate Utility is -22.802740183884776
+--------------------------------------------------------------
+Round 86
+Traning...
+Trainging Over : 74.72154140472412
+Make Decision: state = 241action = RD
+Interact with System: next state is 184, reward in this round is 14.800000
+Updating Assessment System...
+Updating Done : 4.38899827003479
+Aggregate Utility is -3.4421921471078285
+--------------------------------------------------------------
+Round 87
+Traning...
+Trainging Over : 77.07974576950073
+Make Decision: state = 184action = RD
+Interact with System: next state is 61, reward in this round is -0.540000
+Updating Assessment System...
+Updating Done : 4.051660537719727
+Aggregate Utility is -3.2937537176862617
+--------------------------------------------------------------
+Round 88
+Traning...
+Trainging Over : 73.6123046875
+Make Decision: state = 61action = GA
+Interact with System: next state is 128, reward in this round is 24.300000
+Updating Assessment System...
+Updating Done : 4.012120485305786
+Aggregate Utility is 21.66499702585099
+--------------------------------------------------------------
+Round 89
+Traning...
+Trainging Over : 76.09436511993408
+Make Decision: state = 128action = RD
+Interact with System: next state is 128, reward in this round is -0.160000
+Updating Assessment System...
+Updating Done : 4.145890712738037
+Aggregate Utility is 17.17199762068079
+--------------------------------------------------------------
+Round 90
+Traning...
+Trainging Over : 74.50123405456543
+Make Decision: state = 128action = RESET
+Interact with System: next state is 251, reward in this round is -49.280000
+Updating Assessment System...
+Updating Done : 4.457933664321899
+Aggregate Utility is -35.54240190345537
+--------------------------------------------------------------
+Round 91
+Traning...
+Trainging Over : 75.11107349395752
+Make Decision: state = 251action = GA
+Interact with System: next state is 2, reward in this round is 55.680000
+Updating Assessment System...
+Updating Done : 3.926060438156128
+Aggregate Utility is 27.24607847723571
+--------------------------------------------------------------
+Round 92
+Traning...
+Trainging Over : 74.59450316429138
+Make Decision: state = 2action = RECOVER
+Interact with System: next state is 65, reward in this round is -15.696000
+Updating Assessment System...
+Updating Done : 4.167404890060425
+Aggregate Utility is 6.100862781788571
+--------------------------------------------------------------
+Round 93
+Traning...
+Trainging Over : 76.13754343986511
+Make Decision: state = 65action = GA
+Interact with System: next state is 246, reward in this round is -34.820000
+Updating Assessment System...
+Updating Done : 4.258165597915649
+Aggregate Utility is -29.939309774569136
+--------------------------------------------------------------
+Round 94
+Traning...
+Trainging Over : 70.10042643547058
+Make Decision: state = 246action = GA
+Interact with System: next state is 132, reward in this round is 35.340000
+Updating Assessment System...
+Updating Done : 4.095033168792725
+Aggregate Utility is 11.388552180344686
+--------------------------------------------------------------
+Round 95
+Traning...
+Trainging Over : 74.69751310348511
+Make Decision: state = 132action = GA
+Interact with System: next state is 63, reward in this round is -27.020000
+Updating Assessment System...
+Updating Done : 4.1309285163879395
+Aggregate Utility is -17.909158255724257
+--------------------------------------------------------------
+Round 96
+Traning...
+Trainging Over : 74.402015209198
+Make Decision: state = 63action = RD
+Interact with System: next state is 53, reward in this round is 6.640000
+Updating Assessment System...
+Updating Done : 4.229372262954712
+Aggregate Utility is -7.687326604579405
+--------------------------------------------------------------
+Round 97
+Traning...
+Trainging Over : 74.06251645088196
+Make Decision: state = 53action = RD
+Interact with System: next state is 54, reward in this round is 3.860000
+Updating Assessment System...
+Updating Done : 4.120104074478149
+Aggregate Utility is -2.2898612836635173
+--------------------------------------------------------------
+Round 98
+Traning...
+Trainging Over : 73.94977974891663
+Make Decision: state = 54action = RD
+Interact with System: next state is 7, reward in this round is 13.260000
+Updating Assessment System...
+Updating Done : 4.190765142440796
+Aggregate Utility is 11.428110973069181
+--------------------------------------------------------------
+Round 99
+Traning...
+Trainging Over : 73.25100803375244
+Make Decision: state = 7action = RESET
+Interact with System: next state is 92, reward in this round is -14.140000
+Updating Assessment System...
+Updating Done : 3.934218168258667
+Aggregate Utility is -4.99751122154465
+--------------------------------------------------------------
+Round 100
+Traning...
+Trainging Over : 73.6245265007019
+Make Decision: state = 92action = RD
+Interact with System: next state is 250, reward in this round is -23.940000
+Updating Assessment System...
+Updating Done : 4.2867467403411865
+Aggregate Utility is -27.938008977235718
+--------------------------------------------------------------
+Round 101
+Traning...
+Trainging Over : 69.48961067199707
+Make Decision: state = 250action = RD
+Interact with System: next state is 194, reward in this round is 25.040000
+Updating Assessment System...
+Updating Done : 4.598273277282715
+Aggregate Utility is 2.6895928182114197
+--------------------------------------------------------------
+Round 102
+Traning...
+Trainging Over : 73.87106847763062
+Make Decision: state = 194action = GA
+Interact with System: next state is 95, reward in this round is -16.080000
+Updating Assessment System...
+Updating Done : 4.296199560165405
+Aggregate Utility is -13.928325745430874
+--------------------------------------------------------------
+Round 103
+Traning...
+Trainging Over : 73.81799578666687
+Make Decision: state = 95action = RD
+Interact with System: next state is 231, reward in this round is -9.360000
+Updating Assessment System...
+Updating Done : 4.383035898208618
+Aggregate Utility is -20.50266059634469
+--------------------------------------------------------------
+Round 104
+Traning...
+Trainging Over : 72.62064290046692
+Make Decision: state = 231action = GA
+Interact with System: next state is 32, reward in this round is 37.440000
+Updating Assessment System...
+Updating Done : 4.112994909286499
+Aggregate Utility is 21.037871522924245
+--------------------------------------------------------------
+Round 105
+Traning...
+Trainging Over : 77.05348801612854
+Make Decision: state = 32action = RECOVER
+Interact with System: next state is 115, reward in this round is -34.396000
+Updating Assessment System...
+Updating Done : 4.026617527008057
+Aggregate Utility is -17.565702781660605
+--------------------------------------------------------------
+Round 106
+Traning...
+Trainging Over : 73.8140983581543
+Make Decision: state = 115action = RD
+Interact with System: next state is 194, reward in this round is 17.500000
+Updating Assessment System...
+Updating Done : 4.064030170440674
+Aggregate Utility is 3.4474377746715223
+--------------------------------------------------------------
+Round 107
+Traning...
+Trainging Over : 72.56357526779175
+Make Decision: state = 194action = GA
+Interact with System: next state is 168, reward in this round is -1.280000
+Updating Assessment System...
+Updating Done : 4.237173080444336
+Aggregate Utility is 1.4779502197372176
+--------------------------------------------------------------
+Round 108
+Traning...
+Trainging Over : 77.93676996231079
+Make Decision: state = 168action = RECOVER
+Interact with System: next state is 56, reward in this round is 0.812000
+Updating Assessment System...
+Updating Done : 4.239957332611084
+Aggregate Utility is 1.994360175789772
+--------------------------------------------------------------
+Round 109
+Traning...
+Trainging Over : 72.41882467269897
+Make Decision: state = 56action = RESET
+Interact with System: next state is 41, reward in this round is 2.560000
+Updating Assessment System...
+Updating Done : 4.268760919570923
+Aggregate Utility is 4.155488140631815
+--------------------------------------------------------------
+Round 110
+Traning...
+Trainging Over : 71.11966156959534
+Make Decision: state = 41action = RD
+Interact with System: next state is 189, reward in this round is -27.580000
+Updating Assessment System...
+Updating Done : 3.9297690391540527
+Aggregate Utility is -24.255609487494542
+--------------------------------------------------------------
+Round 111
+Traning...
+Trainging Over : 74.28449511528015
+Make Decision: state = 189action = RD
+Interact with System: next state is 245, reward in this round is -8.260000
+Updating Assessment System...
+Updating Done : 4.08809232711792
+Aggregate Utility is -27.664487589995648
+--------------------------------------------------------------
+Round 112
+Traning...
+Trainging Over : 70.88207745552063
+Make Decision: state = 245action = RD
+Interact with System: next state is 162, reward in this round is 29.540000
+Updating Assessment System...
+Updating Done : 4.059475421905518
+Aggregate Utility is 7.40840992800349
+--------------------------------------------------------------
+Round 113
+Traning...
+Trainging Over : 72.79615688323975
+Make Decision: state = 162action = RD
+Interact with System: next state is 40, reward in this round is 11.720000
+Updating Assessment System...
+Updating Done : 3.949631690979004
+Aggregate Utility is 17.64672794240279
+--------------------------------------------------------------
+Round 114
+Traning...
+Trainging Over : 70.34334373474121
+Make Decision: state = 40action = RD
+Interact with System: next state is 109, reward in this round is -23.520000
+Updating Assessment System...
+Updating Done : 4.190976142883301
+Aggregate Utility is -9.40261764607777
+--------------------------------------------------------------
+Round 115
+Traning...
+Trainging Over : 68.80589723587036
+Make Decision: state = 109action = RD
+Interact with System: next state is 109, reward in this round is -0.800000
+Updating Assessment System...
+Updating Done : 4.003781795501709
+Aggregate Utility is -8.322094116862218
+--------------------------------------------------------------
+Round 116
+Traning...
+Trainging Over : 70.7999222278595
+Make Decision: state = 109action = RECOVER
+Interact with System: next state is 96, reward in this round is 15.420000
+Updating Assessment System...
+Updating Done : 4.082857847213745
+Aggregate Utility is 8.762324706510228
+--------------------------------------------------------------
+Round 117
+Traning...
+Trainging Over : 73.66678166389465
+Make Decision: state = 96action = RD
+Interact with System: next state is 130, reward in this round is 5.880000
+Updating Assessment System...
+Updating Done : 4.016549110412598
+Aggregate Utility is 12.889859765208183
+--------------------------------------------------------------
+Round 118
+Traning...
+Trainging Over : 72.31974363327026
+Make Decision: state = 130action = GA
+Interact with System: next state is 166, reward in this round is -16.020000
+Updating Assessment System...
+Updating Done : 4.033110618591309
+Aggregate Utility is -5.7081121878334535
+--------------------------------------------------------------
+Round 119
+Traning...
+Trainging Over : 72.83601355552673
+Make Decision: state = 166action = RESET
+Interact with System: next state is 6, reward in this round is 22.980000
+Updating Assessment System...
+Updating Done : 4.098971128463745
+Aggregate Utility is 18.413510249733235
+--------------------------------------------------------------
+Round 120
+Traning...
+Trainging Over : 69.5974817276001
+Make Decision: state = 6action = NONE
+Interact with System: next state is 110, reward in this round is -26.000000
+Updating Assessment System...
+Updating Done : 4.062365770339966
+Aggregate Utility is -11.269191800213411
+--------------------------------------------------------------
+Round 121
+Traning...
+Trainging Over : 72.38242101669312
+Make Decision: state = 110action = GA
+Interact with System: next state is 128, reward in this round is 19.800000
+Updating Assessment System...
+Updating Done : 4.487070798873901
+Aggregate Utility is 10.784646559829271
+--------------------------------------------------------------
+Round 122
+Traning...
+Trainging Over : 72.74570941925049
+Make Decision: state = 128action = RECOVER
+Interact with System: next state is 128, reward in this round is -0.096000
+Updating Assessment System...
+Updating Done : 4.22916841506958
+Aggregate Utility is 8.531717247863417
+--------------------------------------------------------------
+Round 123
+Traning...
+Trainging Over : 74.90978336334229
+Make Decision: state = 128action = RESET
+Interact with System: next state is 30, reward in this round is -10.380000
+Updating Assessment System...
+Updating Done : 4.175590515136719
+Aggregate Utility is -3.554626201709267
+--------------------------------------------------------------
+Round 124
+Traning...
+Trainging Over : 71.58439111709595
+Make Decision: state = 30action = GA
+Interact with System: next state is 99, reward in this round is -13.240000
+Updating Assessment System...
+Updating Done : 4.271283388137817
+Aggregate Utility is -16.083700961367416
+--------------------------------------------------------------
+Round 125
+Traning...
+Trainging Over : 69.70332717895508
+Make Decision: state = 99action = GA
+Interact with System: next state is 10, reward in this round is 25.260000
+Updating Assessment System...
+Updating Done : 4.145346641540527
+Aggregate Utility is 12.393039230906068
+--------------------------------------------------------------
+Round 126
+Traning...
+Trainging Over : 74.2319769859314
+Make Decision: state = 10action = RECOVER
+Interact with System: next state is 33, reward in this round is -11.992000
+Updating Assessment System...
+Updating Done : 4.251594543457031
+Aggregate Utility is -2.077568615275144
+--------------------------------------------------------------
+Round 127
+Traning...
+Trainging Over : 72.87776041030884
+Make Decision: state = 33action = GA
+Interact with System: next state is 226, reward in this round is -19.920000
+Updating Assessment System...
+Updating Done : 4.274586915969849
+Aggregate Utility is -21.58205489222012
+--------------------------------------------------------------
+Round 128
+Traning...
+Trainging Over : 74.33833909034729
+Make Decision: state = 226action = RD
+Interact with System: next state is 5, reward in this round is 25.460000
+Updating Assessment System...
+Updating Done : 4.436248302459717
+Aggregate Utility is 8.194356086223902
+--------------------------------------------------------------
+Round 129
+Traning...
+Trainging Over : 75.45972561836243
+Make Decision: state = 5action = RD
+Interact with System: next state is 44, reward in this round is -6.920000
+Updating Assessment System...
+Updating Done : 4.42773962020874
+Aggregate Utility is -0.36451513102087674
+--------------------------------------------------------------
+Round 130
+Traning...
+Trainging Over : 73.66338896751404
+Make Decision: state = 44action = GA
+Interact with System: next state is 235, reward in this round is -32.880000
+Updating Assessment System...
+Updating Done : 4.245449781417847
+Aggregate Utility is -33.171612104816695
+--------------------------------------------------------------
+Round 131
+Traning...
+Trainging Over : 72.38102746009827
+Make Decision: state = 235action = RD
+Interact with System: next state is 22, reward in this round is 30.640000
+Updating Assessment System...
+Updating Done : 4.275507688522339
+Aggregate Utility is 4.102710316146638
+--------------------------------------------------------------
+Round 132
+Traning...
+Trainging Over : 72.84259223937988
+Make Decision: state = 22action = RD
+Interact with System: next state is 4, reward in this round is 14.420000
+Updating Assessment System...
+Updating Done : 4.352646589279175
+Aggregate Utility is 17.70216825291731
+--------------------------------------------------------------
+Round 133
+Traning...
+Trainging Over : 68.28455090522766
+Make Decision: state = 4action = GA
+Interact with System: next state is 0, reward in this round is 2.840000
+Updating Assessment System...
+Updating Done : 4.262325286865234
+Aggregate Utility is 17.001734602333848
+--------------------------------------------------------------
+Round 134
+Traning...
+Trainging Over : 71.80744361877441
+Make Decision: state = 0action = TRANS
+Interact with System: next state is 177, reward in this round is -42.700000
+Updating Assessment System...
+Updating Done : 4.24695897102356
+Aggregate Utility is -29.098612318132922
+--------------------------------------------------------------
+Round 135
+Traning...
+Trainging Over : 69.9072597026825
+Make Decision: state = 177action = GA
+Interact with System: next state is 183, reward in this round is -9.040000
+Updating Assessment System...
+Updating Done : 4.050045728683472
+Aggregate Utility is -32.31888985450633
+--------------------------------------------------------------
+Round 136
+Traning...
+Trainging Over : 73.15365028381348
+Make Decision: state = 183action = GA
+Interact with System: next state is 16, reward in this round is 37.440000
+Updating Assessment System...
+Updating Done : 4.094299554824829
+Aggregate Utility is 11.584888116394932
+--------------------------------------------------------------
+Round 137
+Traning...
+Trainging Over : 73.90322709083557
+Make Decision: state = 16action = RECOVER
+Interact with System: next state is 52, reward in this round is -14.996000
+Updating Assessment System...
+Updating Done : 4.102410316467285
+Aggregate Utility is -5.728089506884054
+--------------------------------------------------------------
+Round 138
+Traning...
+Trainging Over : 70.11550974845886
+Make Decision: state = 52action = RECOVER
+Interact with System: next state is 117, reward in this round is -19.688000
+Updating Assessment System...
+Updating Done : 4.3586297035217285
+Aggregate Utility is -24.27047160550725
+--------------------------------------------------------------
+Round 139
+Traning...
+Trainging Over : 71.75188088417053
+Make Decision: state = 117action = GA
+Interact with System: next state is 67, reward in this round is 20.600000
+Updating Assessment System...
+Updating Done : 4.331958770751953
+Aggregate Utility is 1.1836227155942005
+--------------------------------------------------------------
+Round 140
+Traning...
+Trainging Over : 71.14460873603821
+Make Decision: state = 67action = RD
+Interact with System: next state is 141, reward in this round is -5.380000
+Updating Assessment System...
+Updating Done : 3.972963809967041
+Aggregate Utility is -4.433101827524639
+--------------------------------------------------------------
+Round 141
+Traning...
+Trainging Over : 67.27107882499695
+Make Decision: state = 141action = RD
+Interact with System: next state is 155, reward in this round is -11.740000
+Updating Assessment System...
+Updating Done : 4.232263088226318
+Aggregate Utility is -15.286481462019713
+--------------------------------------------------------------
+Round 142
+Traning...
+Trainging Over : 72.62203288078308
+Make Decision: state = 155action = RD
+Interact with System: next state is 48, reward in this round is 16.200000
+Updating Assessment System...
+Updating Done : 4.502335548400879
+Aggregate Utility is 3.9708148303842314
+--------------------------------------------------------------
+Round 143
+Traning...
+Trainging Over : 74.45831727981567
+Make Decision: state = 48action = RD
+Interact with System: next state is 33, reward in this round is 2.480000
+Updating Assessment System...
+Updating Done : 4.15571928024292
+Aggregate Utility is 5.656651864307386
+--------------------------------------------------------------
+Round 144
+Traning...
+Trainging Over : 72.94393181800842
+Make Decision: state = 33action = RD
+Interact with System: next state is 20, reward in this round is 4.180000
+Updating Assessment System...
+Updating Done : 4.1403210163116455
+Aggregate Utility is 8.705321491445908
+--------------------------------------------------------------
+Round 145
+Traning...
+Trainging Over : 71.84228706359863
+Make Decision: state = 20action = RECOVER
+Interact with System: next state is 39, reward in this round is -12.292000
+Updating Assessment System...
+Updating Done : 4.276631832122803
+Aggregate Utility is -5.3277428068432755
+--------------------------------------------------------------
+Round 146
+Traning...
+Trainging Over : 71.20449328422546
+Make Decision: state = 39action = GA
+Interact with System: next state is 1, reward in this round is 17.260000
+Updating Assessment System...
+Updating Done : 4.4358696937561035
+Aggregate Utility is 12.997805754525377
+--------------------------------------------------------------
+Round 147
+Traning...
+Trainging Over : 68.93971657752991
+Make Decision: state = 1action = RD
+Interact with System: next state is 59, reward in this round is -29.960000
+Updating Assessment System...
+Updating Done : 4.1689324378967285
+Aggregate Utility is -19.5617553963797
+--------------------------------------------------------------
+Round 148
+Traning...
+Trainging Over : 68.83120465278625
+Make Decision: state = 59action = RD
+Interact with System: next state is 179, reward in this round is -9.200000
+Updating Assessment System...
+Updating Done : 4.011850357055664
+Aggregate Utility is -24.849404317103758
+--------------------------------------------------------------
+Round 149
+Traning...
+Trainging Over : 71.64673566818237
+Make Decision: state = 179action = RESET
+Interact with System: next state is 157, reward in this round is 6.900000
+Updating Assessment System...
+Updating Done : 4.281009197235107
+Aggregate Utility is -12.97952345368301
+--------------------------------------------------------------
+Round 150
+Traning...
+Trainging Over : 69.87587404251099
+Make Decision: state = 157action = RESET
+Interact with System: next state is 93, reward in this round is 0.700000
+Updating Assessment System...
+Updating Done : 4.014397621154785
+Aggregate Utility is -9.683618762946407
+--------------------------------------------------------------
+Round 151
+Traning...
+Trainging Over : 65.8949179649353
+Make Decision: state = 93action = RD
+Interact with System: next state is 249, reward in this round is -20.300000
+Updating Assessment System...
+Updating Done : 4.0005409717559814
+Aggregate Utility is -28.046895010357133
+--------------------------------------------------------------
+Round 152
+Traning...
+Trainging Over : 68.84726142883301
+Make Decision: state = 249action = GA
+Interact with System: next state is 163, reward in this round is 20.440000
+Updating Assessment System...
+Updating Done : 3.928184747695923
+Aggregate Utility is -1.9975160082857073
+--------------------------------------------------------------
+Round 153
+Traning...
+Trainging Over : 70.50899291038513
+Make Decision: state = 163action = RD
+Interact with System: next state is 43, reward in this round is 7.760000
+Updating Assessment System...
+Updating Done : 4.104118585586548
+Aggregate Utility is 6.16198719337144
+--------------------------------------------------------------
+Round 154
+Traning...
+Trainging Over : 71.77127623558044
+Make Decision: state = 43action = RD
+Interact with System: next state is 39, reward in this round is -0.640000
+Updating Assessment System...
+Updating Done : 4.107922792434692
+Aggregate Utility is 4.289589754697152
+--------------------------------------------------------------
+Round 155
+Traning...
+Trainging Over : 70.09947180747986
+Make Decision: state = 39action = RESET
+Interact with System: next state is 15, reward in this round is 6.980000
+Updating Assessment System...
+Updating Done : 4.27993631362915
+Aggregate Utility is 10.411671803757718
+--------------------------------------------------------------
+Round 156
+Traning...
+Trainging Over : 66.32789707183838
+Make Decision: state = 15action = RD
+Interact with System: next state is 209, reward in this round is -23.640000
+Updating Assessment System...
+Updating Done : 4.161004543304443
+Aggregate Utility is -15.310662556993826
+--------------------------------------------------------------
+Round 157
+Traning...
+Trainging Over : 68.238037109375
+Make Decision: state = 209action = RD
+Interact with System: next state is 112, reward in this round is 8.760000
+Updating Assessment System...
+Updating Done : 6.690078020095825
+Aggregate Utility is -3.4885300455950556
+--------------------------------------------------------------
+Round 158
+Traning...
+Trainging Over : 69.19827580451965
+Make Decision: state = 112action = RD
+Interact with System: next state is 198, reward in this round is 1.920000
+Updating Assessment System...
+Updating Done : 3.977769136428833
+Aggregate Utility is -0.870824036476046
+--------------------------------------------------------------
+Round 159
+Traning...
+Trainging Over : 68.91457176208496
+Make Decision: state = 198action = GA
+Interact with System: next state is 180, reward in this round is -8.740000
+Updating Assessment System...
+Updating Done : 3.902076482772827
+Aggregate Utility is -9.43665922918084
+--------------------------------------------------------------
+Round 160
+Traning...
+Trainging Over : 69.02669048309326
+Make Decision: state = 180action = GA
+Interact with System: next state is 84, reward in this round is 10.760000
+Updating Assessment System...
+Updating Done : 3.9691739082336426
+Aggregate Utility is 3.210672616655331
+--------------------------------------------------------------
+Round 161
+Traning...
+Trainging Over : 68.63055610656738
+Make Decision: state = 84action = GA
+Interact with System: next state is 17, reward in this round is 5.320000
+Updating Assessment System...
+Updating Done : 4.659799337387085
+Aggregate Utility is 7.888538093324266
+--------------------------------------------------------------
+Round 162
+Traning...
+Trainging Over : 86.5185375213623
+Make Decision: state = 17action = RD
+Interact with System: next state is 85, reward in this round is -15.220000
+Updating Assessment System...
+Updating Done : 4.186371803283691
+Aggregate Utility is -8.909169525340593
+--------------------------------------------------------------
+Round 163
+Traning...
+Trainging Over : 75.26728057861328
+Make Decision: state = 85action = RD
+Interact with System: next state is 17, reward in this round is 14.260000
+Updating Assessment System...
+Updating Done : 4.149214267730713
+Aggregate Utility is 7.13266437972753
+--------------------------------------------------------------
+Round 164
+Traning...
+Trainging Over : 72.94162058830261
+Make Decision: state = 17action = GA
+Interact with System: next state is 10, reward in this round is 10.680000
+Updating Assessment System...
+Updating Done : 4.4581427574157715
+Aggregate Utility is 16.386131503782025
+--------------------------------------------------------------
+Round 165
+Traning...
+Trainging Over : 73.6368305683136
+Make Decision: state = 10action = NONE
+Interact with System: next state is 111, reward in this round is -34.300000
+Updating Assessment System...
+Updating Done : 4.227082967758179
+Aggregate Utility is -21.191094796974383
+--------------------------------------------------------------
+Round 166
+Traning...
+Trainging Over : 71.84185028076172
+Make Decision: state = 111action = RD
+Interact with System: next state is 48, reward in this round is 18.740000
+Updating Assessment System...
+Updating Done : 3.9145524501800537
+Aggregate Utility is 1.787124162420497
+--------------------------------------------------------------
+Round 167
+Traning...
+Trainging Over : 73.84748888015747
+Make Decision: state = 48action = GA
+Interact with System: next state is 0, reward in this round is 21.080000
+Updating Assessment System...
+Updating Done : 4.247404098510742
+Aggregate Utility is 22.509699329936396
+--------------------------------------------------------------
+Round 168
+Traning...
+Trainging Over : 74.54330611228943
+Make Decision: state = 0action = TRANS
+Interact with System: next state is 133, reward in this round is -24.300000
+Updating Assessment System...
+Updating Done : 4.32575535774231
+Aggregate Utility is -6.292240536050883
+--------------------------------------------------------------
+Round 169
+Traning...
+Trainging Over : 71.32828640937805
+Make Decision: state = 133action = GA
+Interact with System: next state is 80, reward in this round is 0.820000
+Updating Assessment System...
+Updating Done : 4.097486734390259
+Aggregate Utility is -4.213792428840706
+--------------------------------------------------------------
+Round 170
+Traning...
+Trainging Over : 70.76348829269409
+Make Decision: state = 80action = RD
+Interact with System: next state is 68, reward in this round is 6.980000
+Updating Assessment System...
+Updating Done : 4.014446020126343
+Aggregate Utility is 3.6089660569274358
+--------------------------------------------------------------
+Round 171
+Traning...
+Trainging Over : 69.12424373626709
+Make Decision: state = 68action = RD
+Interact with System: next state is 165, reward in this round is -20.820000
+Updating Assessment System...
+Updating Done : 4.218933820724487
+Aggregate Utility is -17.93282715445806
+--------------------------------------------------------------
+Round 172
+Traning...
+Trainging Over : 68.55519986152649
+Make Decision: state = 165action = RD
+Interact with System: next state is 100, reward in this round is 8.760000
+Updating Assessment System...
+Updating Done : 3.968818187713623
+Aggregate Utility is -5.5862617235664445
+--------------------------------------------------------------
+Round 173
+Traning...
+Trainging Over : 64.07806825637817
+Make Decision: state = 100action = GA
+Interact with System: next state is 223, reward in this round is -29.380000
+Updating Assessment System...
+Updating Done : 3.8401246070861816
+Aggregate Utility is -33.84900937885317
+--------------------------------------------------------------
+Round 174
+Traning...
+Trainging Over : 67.44712972640991
+Make Decision: state = 223action = GA
+Interact with System: next state is 156, reward in this round is 21.280000
+Updating Assessment System...
+Updating Done : 4.150856971740723
+Aggregate Utility is -5.799207503082528
+--------------------------------------------------------------
+Round 175
+Traning...
+Trainging Over : 70.90609693527222
+Make Decision: state = 156action = RD
+Interact with System: next state is 16, reward in this round is 19.160000
+Updating Assessment System...
+Updating Done : 4.018261432647705
+Aggregate Utility is 14.520633997533974
+--------------------------------------------------------------
+Round 176
+Traning...
+Trainging Over : 71.29727244377136
+Make Decision: state = 16action = RD
+Interact with System: next state is 137, reward in this round is -13.360000
+Updating Assessment System...
+Updating Done : 3.9542253017425537
+Aggregate Utility is -1.7434928019728222
+--------------------------------------------------------------
+Round 177
+Traning...
+Trainging Over : 66.79290986061096
+Make Decision: state = 137action = RD
+Interact with System: next state is 157, reward in this round is -15.380000
+Updating Assessment System...
+Updating Done : 3.9185361862182617
+Aggregate Utility is -16.77479424157826
+--------------------------------------------------------------
+Round 178
+Traning...
+Trainging Over : 71.85327506065369
+Make Decision: state = 157action = RD
+Interact with System: next state is 169, reward in this round is 3.000000
+Updating Assessment System...
+Updating Done : 3.9088094234466553
+Aggregate Utility is -10.419835393262613
+--------------------------------------------------------------
+Round 179
+Traning...
+Trainging Over : 70.77657723426819
+Make Decision: state = 169action = GA
+Interact with System: next state is 86, reward in this round is 4.160000
+Updating Assessment System...
+Updating Done : 4.098989009857178
+Aggregate Utility is -4.175868314610082
+--------------------------------------------------------------
+Round 180
+Traning...
+Trainging Over : 67.6361517906189
+Make Decision: state = 86action = RD
+Interact with System: next state is 195, reward in this round is -6.240000
+Updating Assessment System...
+Updating Done : 4.1233155727386475
+Aggregate Utility is -9.580694651688075
+--------------------------------------------------------------
+Round 181
+Traning...
+Trainging Over : 67.61619019508362
+Make Decision: state = 195action = GA
+Interact with System: next state is 161, reward in this round is 2.360000
+Updating Assessment System...
+Updating Done : 4.249185085296631
+Aggregate Utility is -5.304555721350453
+--------------------------------------------------------------
+Round 182
+Traning...
+Trainging Over : 73.8045449256897
+Make Decision: state = 161action = RD
+Interact with System: next state is 140, reward in this round is 11.320000
+Updating Assessment System...
+Updating Done : 4.299607992172241
+Aggregate Utility is 7.0763554229196375
+--------------------------------------------------------------
+Round 183
+Traning...
+Trainging Over : 66.96952199935913
+Make Decision: state = 140action = RESET
+Interact with System: next state is 50, reward in this round is -6.440000
+Updating Assessment System...
+Updating Done : 4.094945192337036
+Aggregate Utility is -0.7789156616642927
+--------------------------------------------------------------
+Round 184
+Traning...
+Trainging Over : 66.33657145500183
+Make Decision: state = 50action = RD
+Interact with System: next state is 53, reward in this round is -8.780000
+Updating Assessment System...
+Updating Done : 4.159213304519653
+Aggregate Utility is -9.403132529331439
+--------------------------------------------------------------
+Round 185
+Traning...
+Trainging Over : 70.18642473220825
+Make Decision: state = 53action = GA
+Interact with System: next state is 0, reward in this round is 32.860000
+Updating Assessment System...
+Updating Done : 4.18345832824707
+Aggregate Utility is 25.337493976534855
+--------------------------------------------------------------
+Round 186
+Traning...
+Trainging Over : 69.89020276069641
+Make Decision: state = 0action = TRANS
+Interact with System: next state is 8, reward in this round is -3.800000
+Updating Assessment System...
+Updating Done : 4.327715635299683
+Aggregate Utility is 16.469995181227883
+--------------------------------------------------------------
+Round 187
+Traning...
+Trainging Over : 67.63870787620544
+Make Decision: state = 8action = RD
+Interact with System: next state is 57, reward in this round is -30.660000
+Updating Assessment System...
+Updating Done : 4.0769476890563965
+Aggregate Utility is -17.484003855017697
+--------------------------------------------------------------
+Round 188
+Traning...
+Trainging Over : 71.93170309066772
+Make Decision: state = 57action = RD
+Interact with System: next state is 154, reward in this round is 2.760000
+Updating Assessment System...
+Updating Done : 4.235882520675659
+Aggregate Utility is -11.227203084014153
+--------------------------------------------------------------
+Round 189
+Traning...
+Trainging Over : 69.65874767303467
+Make Decision: state = 154action = RECOVER
+Interact with System: next state is 5, reward in this round is 18.416000
+Updating Assessment System...
+Updating Done : 4.16335129737854
+Aggregate Utility is 9.434237532788673
+--------------------------------------------------------------
+Round 190
+Traning...
+Trainging Over : 69.60964465141296
+Make Decision: state = 5action = GA
+Interact with System: next state is 37, reward in this round is -12.220000
+Updating Assessment System...
+Updating Done : 4.04689359664917
+Aggregate Utility is -4.672609973769063
+--------------------------------------------------------------
+Round 191
+Traning...
+Trainging Over : 69.05399990081787
+Make Decision: state = 37action = RD
+Interact with System: next state is 196, reward in this round is -4.380000
+Updating Assessment System...
+Updating Done : 4.234153985977173
+Aggregate Utility is -8.118087979015247
+--------------------------------------------------------------
+Round 192
+Traning...
+Trainging Over : 66.10084819793701
+Make Decision: state = 196action = GA
+Interact with System: next state is 188, reward in this round is -16.180000
+Updating Assessment System...
+Updating Done : 4.999935150146484
+Aggregate Utility is -22.674470383212203
+--------------------------------------------------------------
+Round 193
+Traning...
+Trainging Over : 68.21947264671326
+Make Decision: state = 188action = RESET
+Interact with System: next state is 66, reward in this round is 26.700000
+Updating Assessment System...
+Updating Done : 3.902789831161499
+Aggregate Utility is 8.560423693430241
+--------------------------------------------------------------
+Round 194
+Traning...
+Trainging Over : 64.63305401802063
+Make Decision: state = 66action = RD
+Interact with System: next state is 40, reward in this round is -0.320000
+Updating Assessment System...
+Updating Done : 4.012751579284668
+Aggregate Utility is 6.528338954744193
+--------------------------------------------------------------
+Round 195
+Traning...
+Trainging Over : 65.9992265701294
+Make Decision: state = 40action = RECOVER
+Interact with System: next state is 87, reward in this round is -23.392000
+Updating Assessment System...
+Updating Done : 3.9381794929504395
+Aggregate Utility is -18.16932883620465
+--------------------------------------------------------------
+Round 196
+Traning...
+Trainging Over : 65.25542545318604
+Make Decision: state = 87action = RD
+Interact with System: next state is 224, reward in this round is 2.900000
+Updating Assessment System...
+Updating Done : 4.053201198577881
+Aggregate Utility is -11.635463068963716
+--------------------------------------------------------------
+Round 197
+Traning...
+Trainging Over : 62.06238102912903
+Make Decision: state = 224action = GA
+Interact with System: next state is 32, reward in this round is 22.020000
+Updating Assessment System...
+Updating Done : 4.01770281791687
+Aggregate Utility is 12.711629544829023
+--------------------------------------------------------------
+Round 198
+Traning...
+Trainging Over : 63.774009704589844
+Make Decision: state = 32action = RECOVER
+Interact with System: next state is 233, reward in this round is -35.496000
+Updating Assessment System...
+Updating Done : 4.068798065185547
+Aggregate Utility is -25.326696364136776
+--------------------------------------------------------------
+Round 199
+Traning...
+Trainging Over : 62.9486780166626
+Make Decision: state = 233action = RD
+Interact with System: next state is 34, reward in this round is 30.800000
+Updating Assessment System...
+Updating Done : 4.137932300567627
+Aggregate Utility is 10.53864290869058
+--------------------------------------------------------------
+Round 200
+Traning...
+Trainging Over : 64.89925765991211
+Make Decision: state = 34action = RD
+Interact with System: next state is 1, reward in this round is 6.280000
+Updating Assessment System...
+Updating Done : 3.9988465309143066
+Aggregate Utility is 14.710914326952462
+--------------------------------------------------------------
+Round 201
+Traning...
+Trainging Over : 65.63429474830627
+Make Decision: state = 1action = RD
+Interact with System: next state is 143, reward in this round is -23.760000
+Updating Assessment System...
+Updating Done : 4.089579820632935
+Aggregate Utility is -11.991268538438032
+--------------------------------------------------------------
+Round 202
+Traning...
+Trainging Over : 64.64134287834167
+Make Decision: state = 143action = RD
+Interact with System: next state is 161, reward in this round is -0.500000
+Updating Assessment System...
+Updating Done : 4.036157846450806
+Aggregate Utility is -10.093014830750421
+--------------------------------------------------------------
+Round 203
+Traning...
+Trainging Over : 65.39006185531616
+Make Decision: state = 161action = GA
+Interact with System: next state is 34, reward in this round is 15.420000
+Updating Assessment System...
+Updating Done : 4.038776397705078
+Aggregate Utility is 7.345588135399661
+--------------------------------------------------------------
+Round 204
+Traning...
+Trainging Over : 65.08435869216919
+Make Decision: state = 34action = RD
+Interact with System: next state is 84, reward in this round is -11.420000
+Updating Assessment System...
+Updating Done : 3.978888750076294
+Aggregate Utility is -5.543529491680273
+--------------------------------------------------------------
+Round 205
+Traning...
+Trainging Over : 64.91098117828369
+Make Decision: state = 84action = GA
+Interact with System: next state is 206, reward in this round is -9.980000
+Updating Assessment System...
+Updating Done : 4.1214094161987305
+Aggregate Utility is -14.414823593344224
+--------------------------------------------------------------
+Round 206
+Traning...
+Trainging Over : 63.284509897232056
+Make Decision: state = 206action = RESET
+Interact with System: next state is 102, reward in this round is 4.500000
+Updating Assessment System...
+Updating Done : 4.002360582351685
+Aggregate Utility is -7.031858874675374
+--------------------------------------------------------------
+Round 207
+Traning...
+Trainging Over : 65.20128226280212
+Make Decision: state = 102action = GA
+Interact with System: next state is 0, reward in this round is 28.360000
+Updating Assessment System...
+Updating Done : 3.9931640625
+Aggregate Utility is 22.734512900259695
+--------------------------------------------------------------
+Round 208
+Traning...
+Trainging Over : 64.81729555130005
+Make Decision: state = 0action = TRANS
+Interact with System: next state is 219, reward in this round is -50.300000
+Updating Assessment System...
+Updating Done : 3.9340643882751465
+Aggregate Utility is -32.112389679792244
+--------------------------------------------------------------
+Round 209
+Traning...
+Trainging Over : 64.63509893417358
+Make Decision: state = 219action = RESET
+Interact with System: next state is 149, reward in this round is 14.420000
+Updating Assessment System...
+Updating Done : 3.996645212173462
+Aggregate Utility is -11.269911743833806
+--------------------------------------------------------------
+Round 210
+Traning...
+Trainging Over : 65.1686532497406
+Make Decision: state = 149action = RD
+Interact with System: next state is 182, reward in this round is -7.240000
+Updating Assessment System...
+Updating Done : 3.868272066116333
+Aggregate Utility is -16.255929395067042
+--------------------------------------------------------------
+Round 211
+Traning...
+Trainging Over : 66.67564487457275
+Make Decision: state = 182action = RD
+Interact with System: next state is 89, reward in this round is 6.900000
+Updating Assessment System...
+Updating Done : 4.0329835414886475
+Aggregate Utility is -6.104743516053639
+--------------------------------------------------------------
+Round 212
+Traning...
+Trainging Over : 62.915226459503174
+Make Decision: state = 89action = GA
+Interact with System: next state is 148, reward in this round is 5.760000
+Updating Assessment System...
+Updating Done : 4.0060529708862305
+Aggregate Utility is 0.8762051871570948
+--------------------------------------------------------------
+Round 213
+Traning...
+Trainging Over : 64.21878981590271
+Make Decision: state = 148action = RD
+Interact with System: next state is 185, reward in this round is -19.880000
+Updating Assessment System...
+Updating Done : 4.015881538391113
+Aggregate Utility is -19.179035850274328
+--------------------------------------------------------------
+Round 214
+Traning...
+Trainging Over : 64.23624038696289
+Make Decision: state = 185action = GA
+Interact with System: next state is 83, reward in this round is 10.600000
+Updating Assessment System...
+Updating Done : 8.764432668685913
+Aggregate Utility is -4.743228680219467
+--------------------------------------------------------------
+Round 215
+Traning...
+Trainging Over : 66.85553503036499
+Make Decision: state = 83action = GA
+Interact with System: next state is 176, reward in this round is -1.540000
+Updating Assessment System...
+Updating Done : 4.052335262298584
+Aggregate Utility is -5.334582944175568
+--------------------------------------------------------------
+Round 216
+Traning...
+Trainging Over : 64.71044325828552
+Make Decision: state = 176action = RD
+Interact with System: next state is 197, reward in this round is -1.480000
+Updating Assessment System...
+Updating Done : 4.0506751537323
+Aggregate Utility is -5.747666355340462
+--------------------------------------------------------------
+Round 217
+Traning...
+Trainging Over : 63.92682147026062
+Make Decision: state = 197action = RD
+Interact with System: next state is 13, reward in this round is 18.860000
+Updating Assessment System...
+Updating Done : 3.9360222816467285
+Aggregate Utility is 14.261866915727634
+--------------------------------------------------------------
+Round 218
+Traning...
+Trainging Over : 63.893877267837524
+Make Decision: state = 13action = GA
+Interact with System: next state is 167, reward in this round is -24.580000
+Updating Assessment System...
+Updating Done : 3.9229655265808105
+Aggregate Utility is -13.170506467417894
+--------------------------------------------------------------
+Round 219
+Traning...
+Trainging Over : 65.60489630699158
+Make Decision: state = 167action = RD
+Interact with System: next state is 83, reward in this round is 4.100000
+Updating Assessment System...
+Updating Done : 4.0329625606536865
+Aggregate Utility is -6.436405173934317
+--------------------------------------------------------------
+Round 220
+Traning...
+Trainging Over : 62.71663999557495
+Make Decision: state = 83action = RD
+Interact with System: next state is 179, reward in this round is -12.840000
+Updating Assessment System...
+Updating Done : 4.069140911102295
+Aggregate Utility is -17.98912413914745
+--------------------------------------------------------------
+Round 221
+Traning...
+Trainging Over : 66.37020182609558
+Make Decision: state = 179action = RD
+Interact with System: next state is 7, reward in this round is 29.800000
+Updating Assessment System...
+Updating Done : 4.026211738586426
+Aggregate Utility is 15.408700688682037
+--------------------------------------------------------------
+Round 222
+Traning...
+Trainging Over : 64.78113532066345
+Make Decision: state = 7action = GA
+Interact with System: next state is 103, reward in this round is -23.480000
+Updating Assessment System...
+Updating Done : 4.063801288604736
+Aggregate Utility is -11.15303944905437
+--------------------------------------------------------------
+Round 223
+Traning...
+Trainging Over : 67.52254104614258
+Make Decision: state = 103action = RD
+Interact with System: next state is 39, reward in this round is 10.300000
+Updating Assessment System...
+Updating Done : 4.011464834213257
+Aggregate Utility is 1.3775684407565034
+--------------------------------------------------------------
+Round 224
+Traning...
+Trainging Over : 62.91522240638733
+Make Decision: state = 39action = RESET
+Interact with System: next state is 35, reward in this round is 3.480000
+Updating Assessment System...
+Updating Done : 3.9705286026000977
+Aggregate Utility is 4.5820547526052
+--------------------------------------------------------------
+Round 225
+Traning...
+Trainging Over : 63.915496826171875
+Make Decision: state = 35action = RD
+Interact with System: next state is 65, reward in this round is 3.320000
+Updating Assessment System...
+Updating Done : 4.010087966918945
+Aggregate Utility is 6.985643802084164
+--------------------------------------------------------------
+Round 226
+Traning...
+Trainging Over : 62.7286012172699
+Make Decision: state = 65action = RD
+Interact with System: next state is 232, reward in this round is -19.120000
+Updating Assessment System...
+Updating Done : 3.908977746963501
+Aggregate Utility is -13.531484958332673
+--------------------------------------------------------------
+Round 227
+Traning...
+Trainging Over : 64.56880569458008
+Make Decision: state = 232action = RD
+Interact with System: next state is 108, reward in this round is 7.760000
+Updating Assessment System...
+Updating Done : 4.074350118637085
+Aggregate Utility is -3.0651879666661337
+--------------------------------------------------------------
+Round 228
+Traning...
+Trainging Over : 65.13832545280457
+Make Decision: state = 108action = RD
+Interact with System: next state is 185, reward in this round is -17.340000
+Updating Assessment System...
+Updating Done : 3.9784650802612305
+Aggregate Utility is -19.79215037333291
+--------------------------------------------------------------
+Round 229
+Traning...
+Trainging Over : 63.34797239303589
+Make Decision: state = 185action = RD
+Interact with System: next state is 42, reward in this round is 27.000000
+Updating Assessment System...
+Updating Done : 3.91666316986084
+Aggregate Utility is 11.166279701333671
+--------------------------------------------------------------
+Round 230
+Traning...
+Trainging Over : 65.06780695915222
+Make Decision: state = 42action = RD
+Interact with System: next state is 71, reward in this round is -8.780000
+Updating Assessment System...
+Updating Done : 3.9348909854888916
+Aggregate Utility is 0.15302376106693671
+--------------------------------------------------------------
+Round 231
+Traning...
+Trainging Over : 63.01737904548645
+Make Decision: state = 71action = RD
+Interact with System: next state is 1, reward in this round is 18.060000
+Updating Assessment System...
+Updating Done : 4.148014068603516
+Aggregate Utility is 18.182419008853547
+--------------------------------------------------------------
+Round 232
+Traning...
+Trainging Over : 64.85215258598328
+Make Decision: state = 1action = RESET
+Interact with System: next state is 33, reward in this round is -11.180000
+Updating Assessment System...
+Updating Done : 4.101519346237183
+Aggregate Utility is 3.36593520708284
+--------------------------------------------------------------
+Round 233
+Traning...
