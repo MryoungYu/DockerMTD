@@ -28,14 +28,14 @@ class BAG:
     def __init__(self):
         # TODO 可以从文件中读取信息计算trans_prob和loss_value
         # for test
-        # self.node_num = 3
-        # self.trans_prob = [
-        #     [0.1, 0.5, 0.4, 0.],
-        #     [0., 0.8, 0., 0.2],
-        #     [0., 0., 0.3, 0.7],
-        #     [0., 0., 0., 1.],
-        # ]
-        # self.loss_value = [0, 1, 2, 3]
+        self.node_num = 3
+        self.trans_prob = [
+            [0.1, 0.5, 0.4, 0.],
+            [0., 0.8, 0., 0.2],
+            [0., 0., 0.3, 0.7],
+            [0., 0., 0., 1.],
+        ]
+        self.loss_value = [0, 1, 2, 3]
         # test end
         self.access_prob = self.cal_access_pro()
         self.node_threat = self.cal_node_threat()

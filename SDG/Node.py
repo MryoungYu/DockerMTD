@@ -1,11 +1,13 @@
 class Node:
     node_name = ''
+    node_alias = ''
     node_type = ''
     node_group = ''
     node_content = ''
 
-    def __init__(self, name, type, group, content):
+    def __init__(self, name, alias, type, group, content):
         self.node_name = name
+        self.node_alias = alias
         self.node_type = type
         self.node_group = group
         self.node_content = content

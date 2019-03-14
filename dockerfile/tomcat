@@ -1,11 +1,11 @@
-#@name=node1@type=Sys
+#@node@name=node1@type=Sys@group=system
 FROM sshd:ubtuntu
 #@end
-#@name=node4@type=Conf@dependence=node1:0
+#@node@name=node4@type=Conf@dependence=node1:0
 MAINTAINER youngyu
 ENV REFRESHED_AT 2019-03-10
 #@end
-#@name=node2@type=App@dependence=node1:1@group=tomcat@alias=InstallTomcat
+#@node@name=node2@type=App@dependence=node1:1@group=tomcat@alias=InstallTomcat
 WORKDIR /usr
 RUN mkdir jdk
 RUN mkdir tomcat
@@ -16,9 +16,9 @@ ENV JRE_HOME=$JAVA_HOME/jre
 ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
 ENV PATH=/sbin:$JAVA_HOME/bin:$PATH
 #@end
-#@name=node3@type=Inter@dependence=node2:2@group=tomcat
+#@node@name=node3@type=Inter@dependence=node2:2@group=tomcat
 EXPOSE 8080
 #@end
-#@name=node5@type=Conf@dependence=node3:0@alias=BootScript
+#@node@name=node5@type=Conf@dependence=node3:0@alias=BootScript
 ENTRYPOINT ["/usr/tomcat/bin/catalina.sh","run"]
 #@end

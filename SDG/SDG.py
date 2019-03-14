@@ -6,34 +6,57 @@ class SDG:
     group_list = []
     type_list = []
 
+    prefix_node_start = '#@node'
+    prefix_node_end = '#@end'
+    prefix_name = 'name'
+    prefix_alias = 'alias'
+    prefix_type = 'type'
+    prefix_group = 'group'
+    prefix_dependence = 'dependence'
+
     def addNode(self, node):
         self.node_set[node.node_name] = node
 
     def addEdge(self, edge):
         self.edge_set[edge.edge_name] = edge
 
+    def get_node_by_type(self, type):
+        if type not in self.type_list:
+            return []
+        node_list = []
+        for node in self.node_set:
+            if node.node_type == type:
+                node_list.append(node)
+        return node_list
+
     def generateSDGByDockerfile(self, filepath):
         with open(filepath, 'r') as f:
             list = f.readlines()
-        node_name = ''
-        node_content = []
-        node_type = ''
-        node_group = ''
+
         for i in range(0, len(list)):
             line = list[i].rstrip('\n')
-            if line.startswith('#@node'):
+            if line.startswith(self.prefix_node_start):
+                # 节点开始
+                node_name = ''
+                node_alias = ''
+                node_content = []
+                node_type = ''
+                node_group = ''
+                line = line[6:]
                 conf_list = line.split('@')
                 for conf in conf_list:
-                    if conf == '#':
+                    if conf == '#' or conf == '':
                         continue
                     content = conf.split('=')[1]
-                    if conf.startswith('node='):
+                    if conf.startswith(self.prefix_name):
                         node_name = content
-                    if conf.startswith('type='):
+                    if conf.startswith(self.prefix_alias):
+                        node_alias = content
+                    if conf.startswith(self.prefix_type):
                         node_type = content
                         if node_type not in self.type_list:
                             self.type_list.append(node_type)
-                    if conf.startswith('dependence='):
+                    if conf.startswith(self.prefix_dependence):
                         dependence_list = content.split(',')
                         for dep_item in  dependence_list:
                             dep_info = dep_item.split(':')
@@ -42,12 +65,12 @@ class SDG:
                             edge_name = "e%d"%(len(self.edge_set)+1)
                             edge = Edge(edge_name, dep_node_name, node_name, dep_level)
                             self.edge_set[edge_name] = edge
-                    if conf.startswith('group='):
+                    if conf.startswith(self.prefix_group):
                         node_group = content
                         if node_group not in self.group_list:
                             self.group_list.append(node_group)
             elif line == '#@end':
-                node = Node(node_name, node_type, node_group, node_content)
+                node = Node(node_name, node_alias, node_type, node_group, node_content)
                 self.node_set[node_name] = node
             else:
                 node_content.append(line)
