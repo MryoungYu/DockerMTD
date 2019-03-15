@@ -1,6 +1,7 @@
 from SDG.Node import *
 from SDG.Edge import *
 class SDG:
+    """系统依赖图"""
     node_set = {}
     edge_set = {}
     group_list = []
@@ -28,6 +29,19 @@ class SDG:
             if node.node_type == type:
                 node_list.append(node)
         return node_list
+
+    def get_node_by_group(self, group):
+        if group not in self.group_list:
+            return []
+        node_list = []
+        for node in self.node_set:
+            if node.node_group == group:
+                node_list.append(node)
+        return node_list
+
+    def get_edge_by_node(self, node_set):
+        edge_set = []
+
 
     def generateSDGByDockerfile(self, filepath):
         with open(filepath, 'r') as f:
@@ -74,6 +88,12 @@ class SDG:
                 self.node_set[node_name] = node
             else:
                 node_content.append(line)
+
+    def change_to_sgdg(self):
+        root_node = self.get_node_by_type('Sys')[0]
+        # 根据分组信息，提取节点与边，构建分组依赖关系子图
+        for group in self.group_list:
+            node_set = self.get_node_by_group(group)
 
     def __str__(self):
         str = "Node Set:\r\n"
