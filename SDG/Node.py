@@ -19,3 +19,11 @@ class Node:
         str += 'node_group=%s,'%(self.node_group)
         str += 'node_content=%s'%(self.node_content)
         return str
+
+    def __eq__(self, other):
+        if self.node_name == other.node_name and self.node_alias == other.node_alias \
+                and self.node_content == other.node_content and self.node_group == other.node_group \
+                and self.node_type == other.node_type:
+            return True
+        else:
+            return False

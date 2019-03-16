@@ -1,0 +1,20 @@
+#@node@name=node1@type=Sys@group=system
+FROM sshd:centos
+#@end
+#@node@name=node2@type=App@dependence=node1:1@group=tomcat@alias=InstallTomcat
+WORKDIR /usr
+RUN mkdir jdk
+RUN mkdir tomcat
+ADD jdk1.8.0_131 /usr/jdk/
+ADD apache-tomcat-7.0.88 /usr/tomcat/
+ENV JAVA_HOME=/usr/jdk
+ENV JRE_HOME=$JAVA_HOME/jre
+ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
+ENV PATH=/sbin:$JAVA_HOME/bin:$PATH
+#@end
+#@node@name=node3@type=Inter@dependence=node2:2@group=tomcat
+EXPOSE 8888
+#@end
+#@node@name=node4@type=Conf@dependence=node3:0@alias=BootScript
+ENTRYPOINT ["/usr/tomcat/bin/catalina.sh","run"]
+#@end

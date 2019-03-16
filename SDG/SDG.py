@@ -1,5 +1,9 @@
 from SDG.Node import *
 from SDG.Edge import *
+from SDG.GDG import *
+from SDG.SGDG import *
+import pygraphviz as pgv
+
 class SDG:
     """系统依赖图"""
     node_set = {}
@@ -14,6 +18,18 @@ class SDG:
     prefix_type = 'type'
     prefix_group = 'group'
     prefix_dependence = 'dependence'
+
+    def __init__(self):
+        self.node_set = dict()
+        self.edge_set = dict()
+        self.group_list = list()
+        self.type_list = list()
+
+    def __init__(self, node_set, edge_set, group_list, type_list):
+        self.node_set = node_set
+        self.edge_set = edge_set
+        self.group_list = group_list
+        self.type_list = type_list
 
     def addNode(self, node):
         self.node_set[node.node_name] = node
@@ -41,7 +57,14 @@ class SDG:
 
     def get_edge_by_node(self, node_set):
         edge_set = []
+        for edge in self.edge_set:
+            if edge.edge_start_node in node_set and edge.edge_end_node in node_set:
+                edge_set.append(edge)
+        return edge_set
 
+    # def generate_dockerfile(self, filepath):
+    #     with open(filepath, 'w') as f:
+    #
 
     def generateSDGByDockerfile(self, filepath):
         with open(filepath, 'r') as f:
@@ -91,9 +114,19 @@ class SDG:
 
     def change_to_sgdg(self):
         root_node = self.get_node_by_type('Sys')[0]
+        gdg_dict = {}
         # 根据分组信息，提取节点与边，构建分组依赖关系子图
         for group in self.group_list:
             node_set = self.get_node_by_group(group)
+            edge_set = self.get_edge_by_node(node_set)
+            for edge in self.edge_set:
+                if edge.edge_start_node == root_node and edge.edge_end_node in node_set:
+                    gdg_root_node = edge.edge_end_node
+                    break
+            gdg = GDG(node_set, edge_set, group, gdg_root_node)
+            gdg_dict[group] = gdg
+        sgdg = SGDG(root_node, gdg_dict)
+        return sgdg
 
     def __str__(self):
         str = "Node Set:\r\n"
