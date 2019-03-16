@@ -1,15 +1,23 @@
-from SDG.Node import *
-from SDG.Edge import *
-from SDG.GDG import *
-from SDG.SGDG import *
-import pygraphviz as pgv
+from SDG.Node import Node
+from SDG.Edge import Edge
+from SDG.GDG import GDG
+from SDG.SGDG import SGDG
+from graphviz import Digraph
 
 class SDG:
     """系统依赖图"""
+    SDG_name = ''
     node_set = {}
     edge_set = {}
     group_list = []
     type_list = []
+
+    node_shape = {
+        'Sys':'parallelogram',
+        'App':'diamond',
+        'Conf':'box',
+        'Inter':'circle',
+    }
 
     prefix_node_start = '#@node'
     prefix_node_end = '#@end'
@@ -25,7 +33,7 @@ class SDG:
         self.group_list = list()
         self.type_list = list()
 
-    def __init__(self, node_set, edge_set, group_list, type_list):
+    def set_SDG(self, node_set, edge_set, group_list, type_list):
         self.node_set = node_set
         self.edge_set = edge_set
         self.group_list = group_list
@@ -41,7 +49,7 @@ class SDG:
         if type not in self.type_list:
             return []
         node_list = []
-        for node in self.node_set:
+        for node_name, node in self.node_set.items():
             if node.node_type == type:
                 node_list.append(node)
         return node_list
@@ -50,23 +58,41 @@ class SDG:
         if group not in self.group_list:
             return []
         node_list = []
-        for node in self.node_set:
+        for node_name, node in self.node_set.items():
             if node.node_group == group:
                 node_list.append(node)
         return node_list
 
     def get_edge_by_node(self, node_set):
         edge_set = []
-        for edge in self.edge_set:
-            if edge.edge_start_node in node_set and edge.edge_end_node in node_set:
+        node_name_set = []
+        for node in node_set:
+            node_name_set.append(node.node_name)
+        for edge_name, edge in self.edge_set.items():
+            if edge.edge_start_node in node_name_set and edge.edge_end_node in node_name_set:
                 edge_set.append(edge)
         return edge_set
+
+    def draw_graph(self):
+        g = Digraph(self.SDG_name)
+        for node_name, node in self.node_set.items():
+            if node.node_alias != '':
+                node_label = node.node_alias
+            else:
+                node_label = node.node_name
+            g.node(name=node_name, label=node_label, shape=self.node_shape[node.node_type])
+        for edge_name, edge in self.edge_set.items():
+            g.edge(edge.edge_start_node, edge.edge_end_node, edge_name)
+        print(g.source)
+        g.render('SDG-output/' + self.SDG_name + '.gv', view=False)
 
     # def generate_dockerfile(self, filepath):
     #     with open(filepath, 'w') as f:
     #
 
     def generateSDGByDockerfile(self, filepath):
+        filename = filepath.split('/')
+        self.SDG_name = filename[len(filename)-1]
         with open(filepath, 'r') as f:
             list = f.readlines()
 
@@ -112,6 +138,24 @@ class SDG:
             else:
                 node_content.append(line)
 
+    def generate_by_SGDG(self, sgdg):
+        """解除GDG形式，恢复成SDG形式"""
+        sdg_group_list = sgdg.group_list
+        sdg_node_list = [sgdg.root_node]
+        sdg_edge_list = []
+        for group in sgdg.group_list:
+            gdg = sgdg.gdg_dict[group]
+            sdg_node_list += gdg.node_set
+            sdg_edge_list += gdg.edge_set
+            e = Edge('root_' + group, sgdg.root_node.node_name, gdg.root_node, 1)
+            sdg_edge_list.append(e)
+        for node in sdg_node_list:
+            self.node_set[node.node_name] = node
+        for edge in sdg_edge_list:
+            self.edge_set[edge.edge_name] = edge
+        self.group_list = sdg_group_list
+        self.type_list = ['Sys', 'App', 'Conf', 'Inter']
+
     def change_to_sgdg(self):
         root_node = self.get_node_by_type('Sys')[0]
         gdg_dict = {}
@@ -119,8 +163,12 @@ class SDG:
         for group in self.group_list:
             node_set = self.get_node_by_group(group)
             edge_set = self.get_edge_by_node(node_set)
-            for edge in self.edge_set:
-                if edge.edge_start_node == root_node and edge.edge_end_node in node_set:
+            node_name_list = []
+            gdg_root_node = None
+            for node in node_set:
+                node_name_list.append(node.node_name)
+            for edge_name, edge in self.edge_set.items():
+                if edge.edge_start_node == root_node.node_name and edge.edge_end_node in node_name_list:
                     gdg_root_node = edge.edge_end_node
                     break
             gdg = GDG(node_set, edge_set, group, gdg_root_node)

@@ -1,0 +1,23 @@
+#@node@name=node1@type=Sys@alias=ubuntu14.04
+FROM sshd:ubuntu
+#@end
+#@node@name=node2@type=App@dependence=node1:1@group=apache@alias=Apache2.4.33
+RUN apt-get install apache2 -y
+#@end
+#@node@name=node3@type=Inter@dependence=node2:2@group=apache@alias=Listen80
+EXPOSE 80
+#@end
+#@node@name=node4@type=App@dependence=node1:1@group=mysql@alias=MySQL5.7.12
+RUN yum install mysql-server mysql -y
+#@end
+#@node@name=node5@type=Conf@dependence=node4:3@group=mysql@alias=AddPatch(CVE-2017-3308)
+WORKDIR /usr/local
+ADD patch /usr/local/
+RUN bash run.sh
+#@end
+#@node@name=node6@type=Inter@dependence=node5:2@group=mysql@alias=Listen3306
+EXPOSE 3306
+#@end
+#@node@name=node7@type=Conf@dependence=node3:0,node6:0@alias=BootScript
+ENTRYPOINT ["/usr/local/run.sh"]
+#@end

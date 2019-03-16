@@ -1,11 +1,11 @@
-#@node@name=node1@type=Sys@group=system
+#@node@name=node1@type=Sys@group=system@alias=ubuntu16.04
 FROM sshd:ubtuntu
 #@end
-#@node@name=node4@type=Conf@dependence=node1:0
+#@node@name=node4@type=Conf@dependence=node1:0@alias=AuthoerInfo
 MAINTAINER youngyu
 ENV REFRESHED_AT 2019-03-10
 #@end
-#@node@name=node2@type=App@dependence=node1:1@group=tomcat@alias=InstallTomcat
+#@node@name=node2@type=App@dependence=node1:1@group=tomcat@alias=Tomcat7.0.81
 WORKDIR /usr
 RUN mkdir jdk
 RUN mkdir tomcat
@@ -16,7 +16,7 @@ ENV JRE_HOME=$JAVA_HOME/jre
 ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
 ENV PATH=/sbin:$JAVA_HOME/bin:$PATH
 #@end
-#@node@name=node3@type=Inter@dependence=node2:2@group=tomcat
+#@node@name=node3@type=Inter@dependence=node2:2@group=tomcat@alias=Listen8080
 EXPOSE 8080
 #@end
 #@node@name=node5@type=Conf@dependence=node3:0@alias=BootScript

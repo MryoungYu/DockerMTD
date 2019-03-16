@@ -4,7 +4,7 @@ class GDG:
     edge_set = {}
     # 组名，组内节点除根节点外，应均不与外部有相连的边
     group_name = ""
-    # 根节点，与Sys节点相连
+    # 根节点，与Sys节点相连,str
     root_node = None
 
     def __init__(self, node_set, edge_set, name, root_node):
