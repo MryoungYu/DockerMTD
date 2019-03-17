@@ -86,9 +86,60 @@ class SDG:
         print(g.source)
         g.render('SDG-output/' + self.SDG_name + '.gv', view=False)
 
-    # def generate_dockerfile(self, filepath):
-    #     with open(filepath, 'w') as f:
-    #
+    def generate_dockerfile(self):
+        """根据系统依赖图导出dockerfile"""
+        print(self)
+        with open('dockerfile/' + self.SDG_name, 'w') as f:
+            # 先获取根节点
+            root = self.get_node_by_type('Sys')[0]
+            # 按广度优先遍历的方式输出节点信息
+            node_output_list = self.bfs(root)
+            # check point
+            print(node_output_list)
+            for node in node_output_list:
+                annotation = self.generate_annotation_by_node(node)
+                f.write(annotation + "\r\n")
+                for line in node.node_content:
+                    f.write(line + "\r\n")
+                f.write(self.prefix_node_end + "\r\n")
+            f.close()
+
+    def bfs(self, root):
+        """广度优先搜索"""
+        node_list = [root]
+        start = 0
+        end = len(node_list)
+        while start != end:
+            node = node_list[start]
+            next_node_list = self.get_next_nodes(node)
+            if len(next_node_list) != 0:
+                # 需要去重
+                for next_node in next_node_list:
+                    if next_node not in node_list:
+                        node_list.append(next_node)
+            start += 1
+            end = len(node_list)
+        return node_list
+
+    def get_next_nodes(self, node):
+        """获取当前节点的子节点列表"""
+        next_nodes_list = []
+        for edge_name, edge in self.edge_set.items():
+            if edge.edge_start_node == node.node_name:
+                next_node = self.node_set[edge.edge_end_node]
+                if next_node not in next_nodes_list:
+                    next_nodes_list.append(next_node)
+        return next_nodes_list
+
+    def generate_annotation_by_node(self, node):
+        """根据节点信息生成注解"""
+        annotation = self.prefix_node_start + "@" + self.prefix_name + "=" + node.node_name \
+                     + "@" + self.prefix_type + "=" + node.node_type;
+        if node.node_group != '':
+            annotation += "@" + self.prefix_group + "=" + node.node_group
+        if node.node_alias != '':
+            annotation += "@" + self.prefix_alias + "=" + node.node_alias
+        return annotation
 
     def generateSDGByDockerfile(self, filepath):
         filename = filepath.split('/')

@@ -27,5 +27,6 @@ for i in range(len(new_sgdg_list)):
     sdg.SDG_name = 'RD-'+ str(i)
     print(sdg)
     sdg.draw_graph()
-    new_sgdg_list.append(sdg)
-# for sdg in sdg_list:
+    new_sdg_list.append(sdg)
+for new_sdg in new_sdg_list:
+    new_sdg.generate_dockerfile()
