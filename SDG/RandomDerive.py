@@ -29,11 +29,14 @@ class RandomDerive:
         :return:派生的SDG数组，以SGDG形式返回
         """
         sgdg_list = []
-        random.seed(111)
+        r_list = list()
+        r_num = 0
+        # random.seed(111)
         # print(self.gdg_num)
         # print(self.group_list)
         # print(self.root_list)
-        for i in range(n):
+        i = 0
+        while (len(r_list) < n):
             # r = random.random()
             # r = int(r * 10)
             # r = random.randint(0, self.gdg_num-1)
@@ -42,13 +45,23 @@ class RandomDerive:
             new_root_node = random.choice(self.root_list)
             # new_root_node  = self.root_list[r]
             new_gdg_dict = {}
+            r_str = ''
             for group in self.group_list:
                 # 为每个分组随机选取
                 # r = random.random()
                 # r = int(r * 10)
                 # r = random.randint(0, self.gdg_num-1)
                 new_gdg_dict[group] = random.choice(self.gdg_dict[group])
+                r_str += str(self.gdg_dict[group].index(new_gdg_dict[group]))
                 # new_gdg_dict[group] = self.gdg_dict[group][r]
-            sgdg = SGDG(new_root_node, new_gdg_dict)
-            sgdg_list.append(sgdg)
-        return sgdg_list
+            if r_str in r_list:
+                r_num += 1
+                # print(r_str)
+                if i > 0:
+                    i = i - 1
+            else:
+                i = i + 1
+                r_list.append(r_str)
+                sgdg = SGDG(new_root_node, new_gdg_dict)
+                sgdg_list.append(sgdg)
+        return sgdg_list,r_list, r_num
