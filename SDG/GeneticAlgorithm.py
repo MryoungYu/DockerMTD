@@ -11,15 +11,20 @@ class GeneticAlgorithm:
     # 当前生代
     current_generation = 0
 
-    def __init__(self, gdgs):
-        gene_list = []
-        self.chromosome_num = len(gdgs)
-        for gdg in gdgs:
-            self.group_name = gdg.group_name
-            ch = Chromosome(gdg)
-            self.chromosome_total.append(ch)
-            self.genes_repo += ch.gene_list
-        self.genes_repo = list(set(gene_list))
+    # def __init__(self, gdgs):
+    #     gene_list = []
+    #     self.chromosome_num = len(gdgs)
+    #     for gdg in gdgs:
+    #         self.group_name = gdg.group_name
+    #         ch = Chromosome(gdg)
+    #         self.chromosome_total.append(ch)
+    #         self.genes_repo += ch.gene_list
+    #     self.genes_repo = list(set(gene_list))
+    def __init__(self, chs, genes):
+        self.chromosome_total = chs
+        self.genes_repo = genes
+        self.group_name = 'test'
+        self.chromosome_num = len(chs)
 
     def exec(self):
         # 直接进入下一生代的染色体个数
