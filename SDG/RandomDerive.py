@@ -9,6 +9,9 @@ class RandomDerive:
 
     def __init__(self, sdgs):
         self.gdg_num = len(sdgs)
+        self.group_list = list()
+        self.root_list = list()
+        self.gdg_dict = dict()
         for sdg in sdgs:
             sgdg = sdg.change_to_sgdg()
             group_list = sgdg.group_list
@@ -39,8 +42,6 @@ class RandomDerive:
             new_root_node = random.choice(self.root_list)
             # new_root_node  = self.root_list[r]
             new_gdg_dict = {}
-            print(self.gdg_dict)
-            exit(-1)
             for group in self.group_list:
                 # 为每个分组随机选取
                 # r = random.random()

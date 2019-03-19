@@ -6,6 +6,8 @@ class SGDG:
 
     def __init__(self, root, gdgs):
         self.root_node = root
+        self.group_list = list()
+        self.gdg_dict = dict()
         for gdg_group, gdg in gdgs.items():
             self.group_list.append(gdg.group_name)
             self.gdg_dict[gdg.group_name] = gdg
