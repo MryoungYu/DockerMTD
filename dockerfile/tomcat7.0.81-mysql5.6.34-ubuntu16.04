@@ -1,0 +1,53 @@
+#@node@name=node1@type=Sys@group=system@alias=ubuntu16.04
+FROM sshd:ubtuntu
+#@end
+#@node@name=node2@type=App@dependence=node1:1@group=tomcat@alias=Tomcat7.0.81
+WORKDIR /usr
+RUN mkdir jdk
+RUN mkdir tomcat
+ADD jdk1.8.0_131 /usr/jdk/
+ADD apache-tomcat-7.0.81 /usr/tomcat/
+ENV JAVA_HOME=/usr/jdk
+ENV JRE_HOME=$JAVA_HOME/jre
+ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
+ENV PATH=/sbin:$JAVA_HOME/bin:$PATH
+#@end
+#@node@name=node3@type=Inter@dependence=node2:2@group=tomcat@alias=Listen8080
+EXPOSE 8080
+#@end
+#@node@name=node4@type=Conf@dependence=node3:0@alias=RunTomcat@group=tomcat
+ADD start_tomcat.sh /usr/tomcat/start_tomcat.sh
+WORKDIR /usr/tomcat
+RUN bash start_tomcat.sh
+#@end
+#@node@name=node5@type=App@dependence=node1:1@alias=MySQL5.6.34@group=mysql
+ADD mysql-5.6.34 /usr/mysql
+WORKDIR /usr/mysql
+RUN cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql/db -DSYSCONFDIR=/etc -DMYSQL_TCP_PORT=3306 -DMYSQL_UNIX_ADDR=/var/lib/mysql/mysql.sock -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MYISAM_STORAGE_ENGINE=1 -DENABLED_LOCAL_INFILE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DDEFAULT_CHARSET=utf8 -DEXTRA_CHARSETS=all -DDEFAULT_COLLATION=utf8_general_ci -DWITH-MYSQLD-LDFLAGS=-all-static -DWITH-CLIENT-LD-FLAGS=-all-static -DWITH_DEBUG=0 && gmake && gmake install
+RUN chown -R root:mysql /usr/local/mysql/ && chown -R mysql:mysql /data/mysql/db/
+RUN chmod 775 /usr/src/mysql-5.6.29/scripts/mysql_install_db.sh
+RUN /usr/src/mysql-5.6.29/scripts/mysql_install_db.sh --basedir=/usr/local/mysql --datadir=/data/mysql/db --no-defaults --user=mysql
+#@end
+#@node@name=node6@type=Conf@dependence=node5:2@alias=MySQLConfig@group=mysql
+ADD my.cnf /etc/my.cnf
+RUN cp /usr/src/mysql-5.6.29/support-files/mysql.server /etc/init.d/mysqld
+#@end
+#@node@name=node7@type=Conf@dependence=node6:3@alias=RunMySQL@group=mysql
+RUN chmod -R 775 /etc/init.d/mysqld && /etc/init.d/mysqld start
+#@end
+#@node@name=node8@type=Conf@dependence=node7:2@alias=InitDB@group=mysql
+ADD data.sql /usr/data.sql
+ADD initDB.sh /usr/initDB.sh
+RUN chmod +x /usr/initDB.sh
+CMD["/usr/initDB.sh"]
+#@end
+#@node@name=node9@type=Conf@dependence=node7:2@alias=Privileges@group=mysql
+ADD privileges.sql
+ADD grant.sh /usr/grant.sh
+RUN chmod +x grant.sh
+CMD["/usr/initDB.sh"]
+#@end
+#@node@name=node10@type=Inter@dependence=node7:2@alias=Listen3306@group=mysql
+EXPOSE 3306
+#@end
+

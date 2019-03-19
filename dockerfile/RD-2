@@ -1,0 +1,18 @@
+#@node@name=node1@type=Sys@alias=centos2
+FROM sshd:centos
+#@end
+#@node@name=node2@type=App@dependence=node1:1@group=apache@alias=Apache2
+RUN yum install httpd -y
+#@end
+#@node@name=node3@type=Inter@dependence=node2:2@group=apache@alias=Listen80
+EXPOSE 80
+#@end
+#@node@name=node4@type=App@dependence=node1:1@group=mysql@alias=MySQL2
+RUN yum install mysql-server mysql -y
+#@end
+#@node@name=node5@type=Inter@dependence=node4:2@group=mysql@alias=Listen3306
+EXPOSE 3306
+#@end
+#@node@name=node6@type=Conf@dependence=node3:0,node5:0@alias=BootScript
+ENTRYPOINT ["/usr/local/run.sh"]
+#@end

@@ -15,6 +15,7 @@ class Node:
     def __str__(self):
         str = ''
         str += 'node_name=%s,'%(self.node_name)
+        str += 'node_alias=%s,'%(self.node_alias)
         str += 'node_type=%s,'%(self.node_type)
         str += 'node_group=%s,'%(self.node_group)
         str += 'node_content=%s'%(self.node_content)

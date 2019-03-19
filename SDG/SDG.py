@@ -88,14 +88,12 @@ class SDG:
 
     def generate_dockerfile(self):
         """根据系统依赖图导出dockerfile"""
-        print(self)
         with open('dockerfile/' + self.SDG_name, 'w') as f:
             # 先获取根节点
             root = self.get_node_by_type('Sys')[0]
             # 按广度优先遍历的方式输出节点信息
             node_output_list = self.bfs(root)
             # check point
-            print(node_output_list)
             for node in node_output_list:
                 annotation = self.generate_annotation_by_node(node)
                 f.write(annotation + "\r\n")
@@ -228,7 +226,8 @@ class SDG:
         return sgdg
 
     def __str__(self):
-        str = "Node Set:\r\n"
+        str = "SDG Name: " + self.SDG_name + "\r\n"
+        str += "Node Set:\r\n"
         for k,v in self.node_set.items():
             str += "%s:%s\r\n"%(k, v.__str__())
         str += "Edge Set:\r\n"
