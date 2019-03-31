@@ -2,14 +2,31 @@ from SDG.Chromosome import *
 import random
 import time
 
-for i in range(6, 11):
-    num = random.randint(5, 9)
-    print("染色体"+str(i)+"号："+str(num)+"个基因")
+print("生成安全事件队列")
+for i in range(10):
+    num = random.randint(1, 3)
+    threat = random.randint(1, 3)
+    print("时间周期"+str(i)+"："+str(num)+"个染色体有安全问题,"+"安全事件的威胁等级为"+str(threat))
+
     for j in range(num):
-        r = random.randint(0, 20)
+        r = random.randint(1, 10)
         print(r)
 
 exit(-1)
+
+"""
+安全事件序列：
+0' 威胁等级3，涉及染色体：2,4,9
+1' 威胁等级3，涉及染色体：1,10
+2' 威胁等级3：涉及染色体：5
+3' 威胁等级3：涉及染色体：5
+4' 威胁等级1，涉及染色体：6,7
+5' 威胁等级2，涉及染色体：9
+6' 威胁等级1，涉及染色体：4,8,10
+7' 威胁等级3，涉及染色体：4
+8' 威胁等级2，涉及染色体：7,8,10
+9' 威胁等级1，涉及染色体：2
+"""
 
 # 1. 生成10组染色体的基因序列
 # 2. 选择5个适应度最高的进入下一生代
@@ -63,11 +80,39 @@ ch5.total_threat = 10
 ch5.ch_name = 'ch5'
 
 ch6 = Chromosome()
-genes_list_6 = [7, 11, 16, 19, 4, 17, 1]
+genes_list_6 = [15, 0, 17, 4, 15, 2, 10]
 ch6.gene_list = genes_list_6
 ch6.fitness = 0.8648
 ch6.total_threat = 10
 ch6.ch_name = 'ch6'
+
+ch7 = Chromosome()
+genes_list_7 = [19, 5, 17, 15, 4, 14, 7, 16]
+ch7.gene_list = genes_list_7
+ch7.fitness = 0.8648
+ch7.total_threat = 10
+ch7.ch_name = 'ch7'
+
+ch8 = Chromosome()
+genes_list_8 = [0, 10, 9, 5, 20, 8]
+ch8.gene_list = genes_list_8
+ch8.fitness = 0.8648
+ch8.total_threat = 10
+ch8.ch_name = 'ch8'
+
+ch9 = Chromosome()
+genes_list_9 = [4, 9, 1, 7, 5, 9, 11, 18]
+ch9.gene_list = genes_list_9
+ch9.fitness = 0.8648
+ch9.total_threat = 10
+ch9.ch_name = 'ch9'
+
+ch10 = Chromosome()
+genes_list_10 = [4, 1, 14, 9, 20]
+ch10.gene_list = genes_list_10
+ch10.fitness = 0.8648
+ch10.total_threat = 10
+ch10.ch_name = 'ch10'
 
 ch_total_list = [ch1, ch2, ch3, ch4, ch5]
 # 计算基因适应度
