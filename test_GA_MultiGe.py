@@ -2,17 +2,15 @@ from SDG.Chromosome import *
 import random
 import time
 
-print("生成安全事件队列")
-for i in range(10):
-    num = random.randint(1, 3)
-    threat = random.randint(1, 3)
-    print("时间周期"+str(i)+"："+str(num)+"个染色体有安全问题,"+"安全事件的威胁等级为"+str(threat))
-
-    for j in range(num):
-        r = random.randint(1, 10)
-        print(r)
-
-exit(-1)
+# print("生成安全事件队列")
+# for i in range(10):
+#     num = random.randint(1, 3)
+#     threat = random.randint(1, 3)
+#     print("时间周期"+str(i)+"："+str(num)+"个染色体有安全问题,"+"安全事件的威胁等级为"+str(threat))
+#
+#     for j in range(num):
+#         r = random.randint(1, 10)
+#         print(r)
 
 """
 安全事件序列：
@@ -47,74 +45,74 @@ genes_repo = range(21)
 ch1 = Chromosome()
 genes_list_1 = [20, 1, 2, 10, 17, 12, 4, 5, 9]
 ch1.gene_list = genes_list_1
-ch1.fitness = 0.8053
-ch1.total_threat = 13
+ch1.fitness = 0.95
+ch1.total_threat = 3
 ch1.ch_name = 'ch1'
 
 ch2 = Chromosome()
 genes_list_2 = [18, 2, 8, 19, 5, 14]
 ch2.gene_list = genes_list_2
-ch2.fitness = 0.7884
-ch2.total_threat = 12
+ch2.fitness = 0.8667
+ch2.total_threat = 4
 ch2.ch_name = 'ch2'
 
 ch3 = Chromosome()
 genes_list_3 = [6, 2, 20, 0, 18]
 ch3.gene_list = genes_list_3
-ch3.fitness = 0.8628
-ch3.total_threat = 9
+ch3.fitness = 1.0
+ch3.total_threat = 0
 ch3.ch_name = 'ch3'
 
 ch4 = Chromosome()
 genes_list_4 = [8, 10, 13, 15, 0, 1, 18, 5, 3]
 ch4.gene_list = genes_list_4
-ch4.fitness = 0.7789
-ch4.total_threat = 14
+ch4.fitness = 0.8333
+ch4.total_threat = 7
 ch4.ch_name = 'ch4'
 
 ch5 = Chromosome()
 genes_list_5 = [7, 11, 16, 19, 4, 17, 1]
 ch5.gene_list = genes_list_5
-ch5.fitness = 0.8648
-ch5.total_threat = 10
+ch5.fitness = 0.8
+ch5.total_threat = 6
 ch5.ch_name = 'ch5'
 
 ch6 = Chromosome()
 genes_list_6 = [15, 0, 17, 4, 15, 2, 10]
 ch6.gene_list = genes_list_6
-ch6.fitness = 0.8648
-ch6.total_threat = 10
+ch6.fitness = 0.95
+ch6.total_threat = 1
 ch6.ch_name = 'ch6'
 
 ch7 = Chromosome()
 genes_list_7 = [19, 5, 17, 15, 4, 14, 7, 16]
 ch7.gene_list = genes_list_7
-ch7.fitness = 0.8648
-ch7.total_threat = 10
+ch7.fitness = 0.9167
+ch7.total_threat = 3
 ch7.ch_name = 'ch7'
 
 ch8 = Chromosome()
 genes_list_8 = [0, 10, 9, 5, 20, 8]
 ch8.gene_list = genes_list_8
-ch8.fitness = 0.8648
-ch8.total_threat = 10
+ch8.fitness = 0.9333
+ch8.total_threat = 3
 ch8.ch_name = 'ch8'
 
 ch9 = Chromosome()
 genes_list_9 = [4, 9, 1, 7, 5, 9, 11, 18]
 ch9.gene_list = genes_list_9
-ch9.fitness = 0.8648
-ch9.total_threat = 10
+ch9.fitness = 0.8667
+ch9.total_threat = 5
 ch9.ch_name = 'ch9'
 
 ch10 = Chromosome()
 genes_list_10 = [4, 1, 14, 9, 20]
 ch10.gene_list = genes_list_10
-ch10.fitness = 0.8648
-ch10.total_threat = 10
+ch10.fitness = 0.8833
+ch10.total_threat = 6
 ch10.ch_name = 'ch10'
 
-ch_total_list = [ch1, ch2, ch3, ch4, ch5]
+ch_total_list = [ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10]
 # 计算基因适应度
 gene_threat_dict = {}
 ch_fitness_total = 0.0
@@ -128,7 +126,7 @@ for ch in ch_total_list:
         gene_threat_dict[gene] += t_ge
 print("基因库威胁值：")
 print(gene_threat_dict)
-
+exit(-1)
 # 遗传算法
 generation_max = 100 # 最大生代
 generation_current = 0 # 当前生代
